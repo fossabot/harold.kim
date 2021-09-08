@@ -29,20 +29,21 @@ Interested in web exploitation, pentests and development.
 
 #### International
 
+* <b>2021</b> &#129306; DEFCON 29 CTF
 * <b>2021</b> &#129352; LINE CTF
 * <b>2020</b> &#129353; HackTM CTF
-* <b>2020</b> &#127941; DEFCON 28 CTF
+* <b>2020</b> &#129306; DEFCON 28 CTF
 * <b>2020</b> &#129351; InterKosen CTF
 * <b>2019</b> &#129351; Hack&#46;lu CTF
 * <b>2019</b> &#129351; RCTF 2019
 * <b>2019</b> &#129351; *CTF 2019
 * <b>2019</b> &#129351; Harekaze CTF
 * <b>2019</b> &#129351; 0CTF/TCTF 2019
-* <b>2019</b> &#127941; DEFCON 27 CTF
-* <b>2018</b> &#127941; Real World CTF
+* <b>2019</b> &#129306; DEFCON 27 CTF
+* <b>2018</b> &#129306; Real World CTF
 * <b>2018</b> &#129351; BCTF 2018
 * <b>2018</b> &#129353; Hack&#46;lu CTF
-* <b>2017</b> &#127941; CodeGate CTF
+* <b>2017</b> &#129306; CodeGate CTF
 * <b>2017</b> &#129351; ASIS CTF
 * <b>2017</b> &#129351; BSides San Francisco CTF
 * <b>2016</b> &#129352; EKOPARTY CTF
@@ -53,13 +54,13 @@ Interested in web exploitation, pentests and development.
 * <b>2016</b> &#129351; TUCTF
 * <b>2016</b> &#129351; Sharif University CTF
 * <b>2016</b> &#129352; Internetwache CTF
-* <b>2016</b> &#127941; PHDays
+* <b>2016</b> &#129306; PHDays VI
 * <b>2015</b> &#129351; Hack Zone Tunisia
 * <b>2015</b> &#129351; Break In
 * <b>2015</b> &#129352; HITB CTF
-* <b>2015</b> &#127941; CSAW CTF
-* <b>2014</b> &#127941; CSAW CTF
-* <b>2014</b> &#127941; DEFCON 22 CTF
+* <b>2015</b> &#129306; CSAW CTF
+* <b>2014</b> &#129306; CSAW CTF
+* <b>2014</b> &#129306; DEFCON 22 CTF
 * <b>2014</b> &#129352; Olympic Sochi CTF
 
 #### Domestic 
@@ -85,7 +86,7 @@ Interested in web exploitation, pentests and development.
 
 ### &#128030; Disclosed vulnerabilities
 
-#### CVE
+#### Assigned
 
 * CVE-2021-32407
 * CVE-2021-32408
@@ -108,9 +109,6 @@ Interested in web exploitation, pentests and development.
 * CVE-2020-15159
 * CVE-2020-5631
 * CVE-2019-6002
-
-#### KVE
-
 * KVE-2018-0441
 * KVE-2018-0449
 * KVE-2018-0439
@@ -118,6 +116,10 @@ Interested in web exploitation, pentests and development.
 * KVE-2018-0513
 * KVE-2018-0438
 * KVE-2018-0436
+
+#### Others
+
+* ...
 
 </td>
 

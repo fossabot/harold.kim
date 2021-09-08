@@ -20,61 +20,71 @@ Please note that I may be a bit slow to respond.
 
 * <b>Nintendo Switch</b><br>SW-3494-7684-3795<br><br>
 * <b>SEGA</b><br>
-<div style="">
+<div>
     <table>
+        <tr class="spacer" />
+        <tr>
+            <td rowspan=2 valign=top>
+                <b>オンゲキ</b>
+            </td>
+            <td>
+                <b>5068084313130</b>
+            </td>
+        </tr>
         <tr>
             <td>
-                オンゲキ
-            </td>
-            <td>
-                15.71
-            </td>
-            <td>
+                RATING 15.71&nbsp;
                 <span class="badge">30都道府県制覇！！！！</span>&nbsp;
                 <span class="badge">奏伝</span>
             </td>
         </tr>
+        <tr class="spacer" />
         <tr>
-            <td colspan=3>
-                5068084313130
+            <td rowspan=2 valign=top>
+                <b>maimaiDX</b>
+            </td>
+            <td>
+                <b>5069084813130</b>
             </td>
         </tr>
         <tr>
             <td>
-                maimaiDX
-            </td>
-            <td>
-                13539
-            </td>
-            <td>
+                RATING 13539&nbsp;
                 <span class="badge">にじれくま PLUS</span>&nbsp;
             </td>
         </tr>
+        <tr class="spacer" />
         <tr>
-            <td colspan=3>
-                5069084813130
+            <td rowspan=2 valign=top style="padding-right: 40px;">
+                <b>CHUNITHM</b>
+            </td>
+            <td>
+                <b>5063094016130</b>
             </td>
         </tr>
         <tr>
-            <td style="padding-right: 40px;">
-                CHUNITHM
-            </td>
             <td>
-                13.40
-            </td>
-            <td>
+                RATING 13.40&nbsp;
                 <span class="badge">NEW COMER</span>
             </td>
         </tr>
+        <tr class="spacer" />
         <tr>
-            <td colspan=3>
-                5063094016130
+            <td rowspan=2 valign=top style="padding-right: 40px;">
+                <b>プロセカ</b>
+            </td>
+            <td>
+                <b>6719346701660162</b>
             </td>
         </tr>
+        <tr>
+            <td>
+                <span class="badge">皆伝 &star; 1</span>
+            </td>
+        </tr>
+        <tr class="spacer" />
     </table>
 </div>
-
-* <b>プロセカ (Project Sekai: Colorful Stage)</b><br>6719346701660162<br><br>
 
 ## Social
 
