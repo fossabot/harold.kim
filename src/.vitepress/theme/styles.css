@@ -185,6 +185,17 @@ blockquote {
 	padding: 40px;
 }
 
+.partition td {
+	min-width: 300px;
+	vertical-align: top;
+}
+
+.badge {
+	border:1px solid #ccc;
+	font-size:8pt;
+	padding:3px;
+}
+
 @media (max-width: 800px) {
 	body {
 		overflow-y: scroll;
@@ -238,8 +249,13 @@ blockquote {
 		padding: 50px;
 		background-color: #000000ee;
 	}
-
 	
+	.partition td {
+		width:100%;
+		vertical-align: top;
+		float: left;
+	}
+
 	.responsive-page tbody tr {
 		margin-bottom: 40px;
 		display: block;

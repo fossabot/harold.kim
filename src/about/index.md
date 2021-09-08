@@ -21,34 +21,9 @@ Interested in web exploitation, pentests and development.
 * &#128300; [HypwnLab](https://hypwnlab.com)
 * &#128681; [r3kapig](https://r3kapig.com)
 
-### &#128030; Disclosed vulnerabilities
-
-* CVE-2021-29625
-* CVE-2021-20667
-* CVE-2021-20668
-* CVE-2021-20669
-* CVE-2021-20670
-* CVE-2021-20671
-* CVE-2020-28991
-* CVE-2020-5659
-* CVE-2020-5662
-* CVE-2020-5663
-* CVE-2020-5640
-* CVE-2020-15188
-* CVE-2020-15182
-* CVE-2020-15189
-* CVE-2020-15183
-* CVE-2020-15159
-* CVE-2019-6002
-* CVE-2019-5631
-* KVE-2018-0441
-* KVE-2018-0449
-* KVE-2018-0439
-* KVE-2018-0514
-* KVE-2018-0513
-* KVE-2018-0438
-* KVE-2018-0436
-* ...
+<table class="partition">
+<tr>
+<td>
 
 ### &#128681; CTF
 
@@ -97,12 +72,57 @@ Interested in web exploitation, pentests and development.
 
 #### Organizer
 
+* <b>2021</b> Asian Cyber Security Challenge
 * <b>2020</b> BingoCTF
 * <b>2019</b> XCTF Finals 2019
 * <b>2018</b> ASIS CTF
 * <b>2016</b> KAIST & POSTECH Science War
 * <b>2015</b> POSTECH & KAIST Science War
 * <b>2014</b> KAIST & POSTECH Science War
+
+</td>
+<td>
+
+### &#128030; Disclosed vulnerabilities
+
+#### CVE
+
+* CVE-2021-32407
+* CVE-2021-32408
+* CVE-2021-32409
+* CVE-2021-29625
+* CVE-2021-20667
+* CVE-2021-20668
+* CVE-2021-20669
+* CVE-2021-20670
+* CVE-2021-20671
+* CVE-2020-28991
+* CVE-2020-5659
+* CVE-2020-5662
+* CVE-2020-5663
+* CVE-2020-5640
+* CVE-2020-15188
+* CVE-2020-15182
+* CVE-2020-15189
+* CVE-2020-15183
+* CVE-2020-15159
+* CVE-2020-5631
+* CVE-2019-6002
+
+#### KVE
+
+* KVE-2018-0441
+* KVE-2018-0449
+* KVE-2018-0439
+* KVE-2018-0514
+* KVE-2018-0513
+* KVE-2018-0438
+* KVE-2018-0436
+
+</td>
+
+</tr>
+</table>
 
 ### &#128240; Patent
 
