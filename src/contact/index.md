@@ -56,7 +56,7 @@ Please note that I may be a bit slow to respond.
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="padding-right: 40px;">
                 CHUNITHM
             </td>
             <td>
