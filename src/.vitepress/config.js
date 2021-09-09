@@ -30,8 +30,9 @@ module.exports = {
 			{ text: 'About', link: '/about/' },
 			{ text: 'Blog', link: '/blog/' },
 			{ text: 'Donate', link: '/donate/' },
+			{ text: 'Gaming', link: '/gaming/' },
 			{ text: 'Project', link: '/project/' },
-			{ text: 'Contact', link: '/contact/' }
+			{ text: 'Contact', link: '/contact/' },
 		],
 	},
 	customData: {

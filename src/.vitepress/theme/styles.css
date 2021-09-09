@@ -190,6 +190,10 @@ blockquote {
 	vertical-align: top;
 }
 
+.small {
+	font-size: 12pt;
+}
+
 .spacer {
 	height: 10px;
 }

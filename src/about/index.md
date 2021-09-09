@@ -129,3 +129,9 @@ Interested in web exploitation, pentests and development.
 ### &#128240; Patent
 
 * KR101623096B1
+
+<br><br>
+
+---
+
+assad

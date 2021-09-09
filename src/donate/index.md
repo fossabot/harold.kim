@@ -14,7 +14,6 @@ title: Donation
 * By using <a href="https://qr.kakaopay.com/281006011000024890934332">KakaoPay</a><br>
 * <a href="https://www.amazon.co.jp/gp/registry/wishlist/3LVDOY4S0PNRF">Amazon Wishlist</a> is now supported.
 * I have plans to support other types in the future (i.e. WeChat, AliPay, BitCoin, etc.)
-* **After the successful domain, Please drop me an e-mail if the page is not updated for a long time<br>(me&#64;h<span class="block">harold</span>arold.kim)**
 
 ## &#128583; Big Thanks
 
