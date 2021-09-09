@@ -45,7 +45,7 @@ RATING {{this.sega.ongeki.current_rating}}
 
 ### Recent Play
 
-<table width=100%>
+<table width=100% class="fixed-top">
     <tr v-for="log in sega.ongeki.log">
         <td width=50>
             <div class="badge" align=center>{{log.difficulty}}</div>
@@ -75,7 +75,7 @@ RATING {{this.sega.maimai.current_rating}}
 
 ### Recent Play
 
-<table width=100%>
+<table width=100% class="fixed-top">
     <tr v-for="log in sega.maimai.log">
         <td width=50>
             <div class="badge" align=center>{{log.difficulty}}</div>
@@ -105,7 +105,7 @@ RATING {{this.sega.chunithm.current_rating}}
 
 ### Recent Play
 
-<table width=100%>
+<table width=100% class="fixed-top">
     <tr v-for="log in sega.chunithm.log">
         <td width=50>
             <div class="badge" align=center>{{log.difficulty}}</div>
@@ -172,7 +172,6 @@ export default {
   methods: {
     convertChunithmScore(score) {
         let result = ""
-        console.log(score);
         switch(score){
             case '0':
                 result = 'D'

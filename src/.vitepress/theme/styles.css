@@ -190,6 +190,13 @@ blockquote {
 	vertical-align: top;
 }
 
+.fixed-top td {
+	vertical-align: top;
+}
+.fixed-top td:nth-child(1) {
+	width: 60px;
+}
+
 .small {
 	font-size: 12pt;
 }
@@ -258,7 +265,7 @@ blockquote {
 		text-align: center;
 		padding: 0;
 		top: 50%;
-		margin-top: -10rem;
+		margin-top: -12.3rem;
 	}
 
 	.menu-left #nav a {

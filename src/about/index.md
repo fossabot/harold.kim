@@ -131,7 +131,3 @@ Interested in web exploitation, pentests and development.
 * KR101623096B1
 
 <br><br>
-
----
-
-assad
