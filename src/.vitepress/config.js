@@ -1,5 +1,5 @@
 // @ts-check
-const { getPosts, getGists } = require('./getBlog')
+const { getPosts } = require('./getBlog')
 const { execSync } = require('child_process')
 const getLatestCommit = () => execSync('git rev-parse HEAD').toString().trim().substring(0, 12);
 
@@ -38,6 +38,5 @@ module.exports = {
 	customData: {
 		commit: getLatestCommit(),
 		posts: getPosts(),
-		gists: getGists(),
 	}
 };

@@ -4,13 +4,11 @@ title: Gaming
 
 # &#127918; Gaming
 
-Some of games I play are listed down here.
-
-This page gets updated every hour.
+> This page gets automatically updated regularly.&nbsp;&nbsp;
 
 <br>
 
-## Steam <span class="small">&middot; <a href="https://steamcommunity.com/id/stypr">LINK</a></span>
+## Steam <span class="small"><a style="margin-top: 12px; float:right;" href="https://steamcommunity.com/id/stypr">/id/stypr</a></span>
 
 <div v-if="!steam_error">
 
@@ -32,7 +30,7 @@ This page gets updated every hour.
 
 <br>
 
-## オンゲキ <span class="small">&middot; <u>5068084313130</u></span>
+## オンゲキ <span class="small"><u style="margin-top:12px; float:right;">5068084313130</u></span>
 
 
 <div v-if="!sega_error">
@@ -63,7 +61,7 @@ RATING {{this.sega.ongeki.current_rating}}
 
 <br>
 
-## maimai DX <span class="small">&middot; <u>5069084813130</u></span>
+## maimai DX <span class="small"><u style="margin-top:12px; float:right">5069084813130</u></span>
 
 <div v-if="!sega_error">
 
@@ -93,7 +91,7 @@ RATING {{this.sega.maimai.current_rating}}
 
 <br>
 
-## CHUNITHM <span class="small">&middot; <u>5063094016130</u></span>
+## CHUNITHM <span class="small"><u style="margin-top:12px; float:right">5063094016130</u></span>
 
 <div v-if="!sega_error">
 
@@ -129,7 +127,7 @@ SW-3494-7684-3795
 
 <br>
 
-## プロセカ <span class="small">&middot; <u>6719346701660162</u></span>
+## プロセカ <span class="small"><u style="margin-top:12px; float:right">6719346701660162</u></span>
 
 <span class="badge">皆伝 ☆ 1</span>
 

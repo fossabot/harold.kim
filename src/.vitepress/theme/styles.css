@@ -230,6 +230,7 @@ blockquote {
 	overflow: hidden;
 	height: 600px;
 }
+
 .map-container iframe {
 	position: absolute;
 	top: -250px;

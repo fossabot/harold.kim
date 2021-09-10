@@ -27,7 +27,7 @@ title: Donation
 ### Cash
 | | | |
 | --- | --- | --- |
-| <img src=../assets/profile/initbar.png width=100> | &emsp; | Herbert Shin &middot; initbar ([Website](https://init.bar/))<br><ul><li>$80.86</li><li>via PayPal</li></ul> |
+| <img src=../assets/profile/initbar.jpg width=100> | &emsp; | Herbert Shin &middot; initbar ([Website](https://init.bar/))<br><ul><li>$80.86</li><li>via PayPal</li></ul> |
 | <img src=../assets/profile/kazet.jpg width=100> | &emsp; | Krzysztof Zając &middot; kazet ([p4](https://p4.team/))<br><ul><li>$30.00</li><li>via PayPal</li></ul> |
 | <img src=../assets/profile/shpik.jpg width=100> | &emsp; | Sehun Oh &middot; shpik ([Website](https://shpik.kr/))<br><ul><li>22,222 KRW</li><li>via KakaoPay</li></ul> |
 | <img src=../assets/profile/jinmo123.jpg width=100> | &emsp; | Yonghwi Jin &middot; jinmo123 ([Facebook](https://facebook.com/jinyonghwi/))<br><ul><li>$20.86</li><li>via PayPal</li></ul> |
