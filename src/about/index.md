@@ -130,4 +130,54 @@ Interested in web exploitation, pentests and development.
 
 * KR101623096B1
 
-<br><br>
+<br>
+
+<div v-if="!swarm_error">
+
+### &#128205; Last Checkin
+
+* <u>{{new Date(swarm.createdAt * 1000).toLocaleString("en-US")}}</u><br><br>
+<b>{{swarm['name']}}</b><br>
+{{swarm.location.formattedAddress.join(",")}}
+
+<br>
+
+<div class="map-container">
+    <iframe :src="'https://maps.google.com/maps?q=' + this.swarm.location.lat + ',' + this.swarm.location.lng + '&hl=jp;z=14&amp;output=embed&zoom=16'">
+    </iframe>
+</div>
+
+</div>
+
+<script type="module">
+import { useSiteData } from 'vitepress'
+
+export default {
+  data() {
+    return {
+      swarm: {'location': {}},
+      swarm_error: true
+    };
+  },
+  mounted() {
+    // Dynamically load APIs
+    // Return stored gists on error
+    fetch("https://api.harold.kim/api/v1/swarm")
+    .then((response) => response.json())
+    .then((response) => {
+      this.updateSwarm(response)
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+  },
+  methods: {
+    updateSwarm(response) {
+      // Parse swarm
+      this.swarm = response.checkins.items[0].venue
+      this.swarm.createdAt = response.checkins.items[0].createdAt
+      this.swarm_error = false
+    },
+  }
+};
+</script>

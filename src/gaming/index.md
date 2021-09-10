@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: Gaming
 ---
 
 # &#127918; Gaming
@@ -23,7 +23,7 @@ This page gets updated every hour.
             {{game.name}}
         </td>
         <td align=right>
-            {{game.playtime_forever/60}} hrs
+            {{(game.playtime_2weeks/60).toFixed(2)}} hrs
         </td>
     </tr>
 </table>
@@ -158,7 +158,7 @@ export default {
       this.updateSteam(response);
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error)
     });
     fetch("https://api.harold.kim/api/v1/sega")
     .then((response) => response.json())
@@ -166,7 +166,7 @@ export default {
       this.updateSega(response);
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error)
     });
   },
   methods: {
@@ -215,46 +215,27 @@ export default {
     },
     updateSega(response) {
       // Parse ongeki
-      this.sega.ongeki = response.ongeki.info;
-      this.sega.ongeki.log = response.ongeki.log;
+      this.sega.ongeki = response.ongeki.info
+      this.sega.ongeki.log = response.ongeki.log
       this.sega.ongeki.badges = []
-      this.sega.ongeki.badges.push(response.ongeki.info.title);
+      this.sega.ongeki.badges.push(response.ongeki.info.title)
       if(response.ongeki.info.battle_point >= 15000){
-        this.sega.ongeki.badges.push('奏伝');
+        this.sega.ongeki.badges.push('奏伝')
       }
       // Parse maimai
-      this.sega.maimai = response.maimai.info;
-      this.sega.maimai.log = response.maimai.log;
+      this.sega.maimai = response.maimai.info
+      this.sega.maimai.log = response.maimai.log
       this.sega.maimai.badges = []
-      this.sega.maimai.badges.push(response.maimai.info.title);
-      this.sega.maimai.badges.concat(response.maimai.info.extra);
+      this.sega.maimai.badges.push(response.maimai.info.title)
+      this.sega.maimai.badges.concat(response.maimai.info.extra)
       // Parse Chunithm
-      this.sega.chunithm = response.chunithm.info;
-      this.sega.chunithm.log = response.chunithm.log;
+      this.sega.chunithm = response.chunithm.info
+      this.sega.chunithm.log = response.chunithm.log
       this.sega.chunithm.badges = []
-      this.sega.chunithm.badges.push(response.chunithm.info.title);
+      this.sega.chunithm.badges.push(response.chunithm.info.title)
 
       // disable error
       this.sega_error = false
-    },
-    getGists() {
-      try {
-        let response = useSiteData().value.customData.sega;
-        this.updateSega(response);
-      }catch(error){
-        // console.log(error);
-        this.gists_error = true;
-      };
-    },
-  },
-  computed: {
-    sortedPosts: function () {
-      if(this.posts){
-        this.posts.sort((a, b) => {
-          return new Date(b.created_at) - new Date(a.created_at);
-        });
-        return this.posts;
-      }
     },
   }
 };
