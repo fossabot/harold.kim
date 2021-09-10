@@ -11,8 +11,8 @@
   <h1>&#128210; Gists</h1>
   <ul id="list-gist">
     <span v-if="gists_error">
-      Ouch! We couldn't load the gists. How about checking stypr's
-      <a href="//github.com/stypr">gists</a> instead?
+      Ouch! We couldn't load the gists.<br>
+      How about checking stypr's<a href="//gist.github.com/stypr">gists</a> instead?
     </span>
     <span v-if="!(gists.length && !gists_error)"> Loading... </span>
     <li v-for="gist in gists" :key="gist.created_at">
@@ -38,14 +38,13 @@ export default {
     this.getPosts();
     // Dynamically load gists
     // Return stored gists on error
-    fetch("https://api.github.com/users/stypr/gists")
+    fetch("https://api.harold.kim/api/v1/gists") // github.com/users/stypr/gists
     .then((response) => response.json())
     .then((response) => {
       this.updateGists(response);
     })
     .catch((error) => {
-      console.log(error);
-      this.getGists();
+      this.gists_error = true
     });
   },
   methods: {
@@ -72,16 +71,7 @@ export default {
         });
       }
       this.gists_error = false;
-    },
-    getGists() {
-      try {
-        let response = useSiteData().value.customData.gists;
-        this.updateGists(response);
-      }catch(error){
-        // console.log(error);
-        this.gists_error = true;
-      };
-    },
+    }
   },
   computed: {
     sortedPosts: function () {

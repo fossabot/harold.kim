@@ -161,7 +161,7 @@ export default {
   },
   mounted() {
     // Dynamically load APIs
-    // Return stored gists on error
+    // Return stored swarm on error
     fetch("https://api.harold.kim/api/v1/swarm")
     .then((response) => response.json())
     .then((response) => {
