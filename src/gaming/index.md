@@ -49,7 +49,7 @@ RATING {{this.sega.ongeki.current_rating}}
             <div class="badge" align=center>{{log.difficulty}}</div>
         </td>
         <td>
-            {{log.title}}
+            {{log.title.replace("&#x26;amp;", "&")}}
         </td>
         <td align=right>
             <b>{{log.score_sign.toUpperCase().replace("PLUS","+")}}</b>

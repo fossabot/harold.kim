@@ -134,7 +134,7 @@ Interested in web exploitation, pentests and development.
 
 <div v-if="!swarm_error">
 
-### &#128205; Last Checkin
+### &#128205; Last Visit
 
 * <u>{{new Date(swarm.createdAt * 1000).toLocaleString("en-US")}}</u><br><br>
 <b>{{swarm['name']}}</b><br>
