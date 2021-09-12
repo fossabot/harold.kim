@@ -18,7 +18,6 @@ Interested in web exploitation, pentests and development.
 ### &#128064; Affiliated with
 
 * &#128188; [Flatt Security Inc.](https://flatt.tech)
-* &#128300; [HypwnLab](https://hypwnlab.com)
 * &#128681; [r3kapig](https://r3kapig.com)
 
 <table class="partition">

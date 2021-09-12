@@ -20,7 +20,7 @@ code a span {
 }
 
 .token.punctuation {
-    color: #0;
+    color: #000;
 }
 
 .token.tag,
