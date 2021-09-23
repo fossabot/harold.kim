@@ -4,9 +4,6 @@ title: Gaming
 
 # &#127918; Gaming
 
-> This page gets automatically updated regularly.&nbsp;&nbsp;
-
-<br>
 
 ## Steam <span class="small"><a style="margin-top: 12px; float:right;" href="https://steamcommunity.com/id/stypr">/id/stypr</a></span>
 

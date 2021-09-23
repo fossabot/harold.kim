@@ -26,3 +26,7 @@ Please note that I may be a bit slow to respond.
 * <b>Facebook</b><br>[stypr](https://www.facebook.com/stypr)<br><br>
 * <b>LinkedIn</b><br>[stypr](https://www.linkedin.com/in/stypr/)<br><br>
 * <b>Twitch</b><br>[pwnfast](https://twitch.tv/pwnfast)<br><br>
+
+## Discord
+
+* <b>%\_stypr\_%</b><br>[Invite Link](https://discord.com/invite/CDgMCp3bMZ)

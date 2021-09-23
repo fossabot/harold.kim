@@ -212,6 +212,7 @@ blockquote {
     border: 1px solid #ccc;
     font-size: 8pt;
     padding: 3px;
+    min-width: 60px;
 }
 
 ::-webkit-scrollbar {

@@ -3,14 +3,14 @@
     <div id="nav">
       <a
         class="notranslate"
-        v-bind:class="{
+        :class="{
           'router-link-exact-active':
             (menu.link == route.path || menu.link + 'index.html' == route.path) ||
             (menu.link == '/blog/' && route.path.match(/^\/blog/)),
         }"
-        v-bind:href="menu.link"
+        :href="menu.link"
+        :key="menu"
         v-for="menu in theme.nav"
-        v-bind:key="menu"
       >
         {{ menu.text }}<br />
       </a>

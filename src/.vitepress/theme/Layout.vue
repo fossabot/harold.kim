@@ -16,4 +16,4 @@
   const { theme } = useData();
   const git_hash = theme.value.customData.commit;
   console.log("--- Designed by stypr (https://harold.kim/) ---");
-</script>
+</script>ya
