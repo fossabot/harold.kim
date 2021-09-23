@@ -87,6 +87,7 @@ Interested in web exploitation, pentests and development.
 
 #### Assigned
 
+* CVE-2021-20829
 * CVE-2021-32407
 * CVE-2021-32408
 * CVE-2021-32409

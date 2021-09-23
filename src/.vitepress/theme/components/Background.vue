@@ -16,7 +16,7 @@
       :position="{ y: 0, z: 100 }"
       :look-at="{ x: 0, y: 0, z: 0 }"
     />
-    <Scene background="#001902">
+    <Scene background="#021002">
       <SpotLight
         color="#00fc00"
         :intensity="0.3"
@@ -37,7 +37,7 @@
         :cast-shadow="true"
         :receive-shadow="true"
       >
-        <BoxGeometry :width="3" :height="3" :depth="3" />
+        <BoxGeometry :width="2" :height="2" :depth="2" />
         <PhongMaterial />
       </InstancedMesh>
       <Text
@@ -77,7 +77,7 @@
   export default {
     setup() {
       return {
-        NUM_INSTANCES: 1000,
+        NUM_INSTANCES: 1337,
       };
     },
     components: {
