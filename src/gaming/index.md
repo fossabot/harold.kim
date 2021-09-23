@@ -136,7 +136,7 @@ SW-3494-7684-3795
 
 
 <script type="module">
-import { useSiteData } from 'vitepress'
+import { useData } from 'vitepress'
 
 export default {
   data() {

@@ -8,7 +8,7 @@
             (menu.link == '/blog/' && route.path.match(/^\/blog/)),
         }"
         v-bind:href="menu.link"
-        v-for="menu in $site.themeConfig.nav"
+        v-for="menu in theme.nav"
         v-bind:key="menu"
       >
         {{ menu.text }}<br />
@@ -16,14 +16,9 @@
     </div>
   </div>
 </template>
-<script>
-import { useRoute } from "vitepress";
+<script setup lang="ts">
+  import { useRoute, useData } from "vitepress";
 
-export default {
-  setup() {
-    return {
-      route: useRoute(),
-    };
-  }
-};
+  const { theme } = useData()
+  const route = useRoute()
 </script>

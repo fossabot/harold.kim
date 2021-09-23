@@ -1,6 +1,6 @@
 const { getPosts } = require('./getBlog');
 const { execSync } = require('child_process');
-const getLatestCommit = () => execSync('git rev-parse HEAD').toString().trim().substring(0, 12);
+const getLatestCommit = () => execSync('git rev-parse HEAD').toString().trim().substring(0, 16);
 
 module.exports = {
     title: "harold.kim",
@@ -22,7 +22,7 @@ module.exports = {
 		}
 	},
 	themeConfig: {
-		repo: 'stypr/harold.kim',
+		repo: 'https://github.com/stypr/harold.kim',
 		editLinks: false,
 		nav: [
 			{ text: 'Home', link: '/' },
@@ -33,9 +33,9 @@ module.exports = {
 			{ text: 'Project', link: '/project/' },
 			{ text: 'Contact', link: '/contact/' },
 		],
+		customData: {
+			commit: getLatestCommit(),
+			posts: getPosts(),
+		}
 	},
-	customData: {
-		commit: getLatestCommit(),
-		posts: getPosts(),
-	}
 };

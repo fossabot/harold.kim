@@ -85,6 +85,10 @@ canvas {
     z-index: 10 !important;
 }
 
+.menu-bottom small {
+    letter-spacing: -1px;
+}
+
 #app>.container {
     position: fixed;
     left: 190px;
@@ -141,8 +145,6 @@ canvas {
 
 .back {
     float: right;
-    padding-right: 20px;
-    padding-top: 20px;
     font-size: 20px;
 }
 
@@ -266,6 +268,7 @@ blockquote {
         position: relative;
         min-height: 100%;
         width: 100%;
+        padding:0;
     }
     .menu-left #nav {
         background: transparent;

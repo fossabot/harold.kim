@@ -1,19 +1,19 @@
 <template>
   <NavBar />
   <Container />
+  <Background />
   <div class="menu-bottom">
     <a href="//github.com/stypr/harold.kim">Made with &hearts;</a><br />
-    <small>{{ GIT_HASH }}</small>
+    <small>{{ git_hash }}</small>
   </div>
-  <ClientOnly>
-    <Dyn component="Background" />
-  </ClientOnly>
 </template>
 <script setup lang="ts">
-import { useSiteData } from 'vitepress'
-import Container from './Container.vue';
-import NavBar from './NavBar.vue';
+  import NavBar from './NavBar.vue';
+  import Background from './components/Background.vue';
+  import Container from './components/Container.vue';
+  import { useData } from 'vitepress';
 
-const GIT_HASH = useSiteData().value.customData.commit
-console.log("--- Designed by stypr (https://harold.kim/) ---");
+  const { theme } = useData();
+  const git_hash = theme.value.customData.commit;
+  console.log("--- Designed by stypr (https://harold.kim/) ---");
 </script>

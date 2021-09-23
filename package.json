@@ -8,12 +8,15 @@
 		"serve": "vitepress serve src"
 	},
 	"target": "esnext",
-	"module": "commonjs",
+	"module": "esnext",
 	"devDependencies": {
+		"axios": "^0.21.4",
+		"glob": "^7.2.0",
 		"three": "^0.127.0",
-		"troisjs": "0.2.3",
-		"vitepress": "0.13.0",
-		"axios": "^0.21.1",
-		"glob": "^7.1.6"
+		"troisjs": "0.3.2",
+		"vitepress": "^0.19.1"
+	},
+	"dependencies": {
+		"gray-matter": "^4.0.3"
 	}
 }

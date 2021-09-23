@@ -137,7 +137,7 @@ Interested in web exploitation, pentests and development.
 
 * <u>{{new Date(swarm.createdAt * 1000).toLocaleString("en-US")}}</u><br><br>
 <b>{{swarm['name']}}</b><br>
-{{swarm.location.formattedAddress.join(",")}}
+<span>{{swarm.location.formattedAddress.join(",")}}</span>
 
 <br>
 
@@ -149,7 +149,7 @@ Interested in web exploitation, pentests and development.
 </div>
 
 <script type="module">
-import { useSiteData } from 'vitepress'
+import { useData } from 'vitepress'
 
 export default {
   data() {

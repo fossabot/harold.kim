@@ -1,12 +1,13 @@
+import './css/main.css';
+import './css/code.css';
 import Layout from './Layout.vue';
-import Dyn from '/Dyn.vue';
-import './styles.css';
-import './codes.css';
+import BlogList from './components/BlogList.vue';
 
 export default {
   Layout,
   enhanceApp({ app, router, siteData }) {
-    // app.use(store);
-    app.component('Dyn', Dyn);
+    // any custom tags used within Markdown goes here
+    app.component('BlogList', BlogList);
+
   }
 };
