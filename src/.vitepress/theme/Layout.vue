@@ -19,4 +19,4 @@
     "%cDesigned by stypr (https://harold.kim/)",
     "color:#004080; font-size:30px; padding:30px; border:1px solid #004080; margin: 20px;"
   );
-</script>ya
+</script>
