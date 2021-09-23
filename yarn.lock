@@ -527,15 +527,15 @@ strip-bom-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom-string/-/strip-bom-string-1.0.0.tgz#e5211e9224369fbb81d633a2f00044dc8cedad92"
   integrity sha1-5SEekiQ2n7uB1jOi8ABE3IztrZI=
 
-three@^0.127:
+three@0.127:
   version "0.127.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.127.0.tgz#c463f4d41b2c735dcf8e9e51a388815e80cd3791"
   integrity sha512-wtgrn+mhYUbobxT7QN3GPdu3SRpSBQvwY6uOzLChWS7QE//f7paDU/+wlzbg+ngeIvBBqjBHSRuywTh8A99Jng==
 
-troisjs@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/troisjs/-/troisjs-0.2.3.tgz#6a881c2fa18cdb137d670c38b4e23c802a194bc7"
-  integrity sha512-4grL0nICkEFObLGedIMs3MFsuBh7lQTcSrXeJ09JFRJBXmQ5lF+dumac+dSuSXx6iarjcpQEWuPaHlWdpRlBJw==
+troisjs@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/troisjs/-/troisjs-0.3.2.tgz#c2c3235ae4f2e92349a860701a87ff3dd95e4aa7"
+  integrity sha512-RF+r6tZvODVG1kwiz2BacxJTzap5UIlhIX3v9dmU/t4guIkeAA8VB8dy441vl+gPpQEuavOF5EkCs83bu3f5nQ==
 
 vite@^2.5.0:
   version "2.5.10"
