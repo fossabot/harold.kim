@@ -4,6 +4,7 @@
 set -e
 
 # build
+rm -rf src/.vitepress/dist
 yarn build
 
 # setup env

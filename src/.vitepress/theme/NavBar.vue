@@ -2,6 +2,7 @@
   <div class="menu-left">
     <div id="nav">
       <a
+        class="notranslate"
         v-bind:class="{
           'router-link-exact-active':
             (menu.link == route.path || menu.link + 'index.html' == route.path) ||
