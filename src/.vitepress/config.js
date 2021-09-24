@@ -11,9 +11,9 @@ module.exports = {
         ['meta', { name: 'google', content: 'notranslate' }],
         ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
         ['link', { rel: 'apple-touch-icon-precomposed', href: '/favicon.ico' }],
+		['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:400' }],
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:300' }],
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+KR:300' }],
-        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Ubuntu+Mono:400' }],
     ],
 	markdown: {
 		anchor: {
