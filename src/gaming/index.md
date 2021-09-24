@@ -46,7 +46,7 @@ RATING {{this.sega.ongeki.current_rating}}
             <div class="badge" align=center>{{log.difficulty}}</div>
         </td>
         <td>
-            {{log.title.replace("&#x26;amp;", "&")}}
+            {{decodeTitle(log.title)}}
         </td>
         <td align=right>
             <b>{{log.score_sign.toUpperCase().replace("PLUS","+")}}</b>
@@ -76,7 +76,7 @@ RATING {{this.sega.maimai.current_rating}}
             <div class="badge" align=center>{{log.difficulty}}</div>
         </td>
         <td>
-            {{log.title}}
+            {{decodeTitle(log.title)}}
         </td>
         <td align=right>
             <b>{{log.score_sign.toUpperCase().replace("PLUS","+")}}</b>
@@ -106,7 +106,7 @@ RATING {{this.sega.chunithm.current_rating}}
             <div class="badge" align=center>{{log.difficulty}}</div>
         </td>
         <td>
-            {{log.title}}
+            {{decodeTitle(log.title)}}
         </td>
         <td align=right>
             <b>{{convertChunithmScore(log.score_sign)}}</b>
@@ -165,6 +165,17 @@ export default {
     });
   },
   methods: {
+    // XSS-safe decode
+    decodeTitle(title) {
+      for (let i of Array(2).keys()) {
+        let p = new DOMParser;
+        title = p.parseFromString(
+          '<!doctype html><body>' + title,
+          'text/html').body.textContent
+      }
+      return title
+    },
+    // ...................................
     convertChunithmScore(score) {
         let result = ""
         switch(score){
