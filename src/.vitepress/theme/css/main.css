@@ -228,6 +228,45 @@ blockquote {
     box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 .map-container {
     position: relative;
     max-width: 100%;
@@ -243,6 +282,16 @@ blockquote {
     width: calc(100% + 500px);
     height: calc(100% + 500px);
     margin: auto;
+}
+.map-container .map-license {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px;
+    z-index: 1337 !important;
+    background: #000;
+    font-size: 10pt;
+    letter-spacing: -.5px;
 }
 
 @media (max-width: 800px) {

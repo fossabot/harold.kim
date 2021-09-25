@@ -26,7 +26,7 @@ Interested in web exploitation, pentests and development.
 
 ### &#128681; CTF
 
-#### International
+#### International Finals
 
 * <b>2021</b> &#129306; DEFCON 29 CTF
 * <b>2021</b> &#129352; LINE CTF
@@ -62,7 +62,7 @@ Interested in web exploitation, pentests and development.
 * <b>2014</b> &#129306; DEFCON 22 CTF
 * <b>2014</b> &#129352; Olympic Sochi CTF
 
-#### Domestic 
+#### Domestic Finals
 
 * <b>2020</b> &#129352; COC (Whitehat Contest)
 * <b>2019</b> &#129351; COC (Whitehat Contest)
@@ -87,28 +87,27 @@ Interested in web exploitation, pentests and development.
 
 #### Assigned
 
-* CVE-2021-20829
-* CVE-2021-32407
-* CVE-2021-32408
-* CVE-2021-32409
-* CVE-2021-29625
 * CVE-2021-20667
 * CVE-2021-20668
 * CVE-2021-20669
 * CVE-2021-20670
 * CVE-2021-20671
-* CVE-2020-28991
+* CVE-2021-20829
+* CVE-2021-29625
+* CVE-2021-32407
+* CVE-2021-32408
+* CVE-2021-32409
+* CVE-2020-5631
 * CVE-2020-5659
 * CVE-2020-5662
 * CVE-2020-5663
 * CVE-2020-5640
-* CVE-2020-15188
-* CVE-2020-15182
-* CVE-2020-15189
-* CVE-2020-15183
 * CVE-2020-15159
-* CVE-2020-5631
-* CVE-2019-6002
+* CVE-2020-15182
+* CVE-2020-15183
+* CVE-2020-15188
+* CVE-2020-15189
+* CVE-2020-28991
 * KVE-2018-0441
 * KVE-2018-0449
 * KVE-2018-0439
@@ -116,6 +115,7 @@ Interested in web exploitation, pentests and development.
 * KVE-2018-0513
 * KVE-2018-0438
 * KVE-2018-0436
+* ...
 
 #### Others
 
@@ -145,6 +145,7 @@ Interested in web exploitation, pentests and development.
 <div class="map-container">
     <iframe :src="'https://maps.google.com/maps?q=' + this.swarm.location.lat + ',' + this.swarm.location.lng + '&hl=jp;z=14&amp;output=embed&zoom=16'">
     </iframe>
+    <div class="map-license">&copy; Google Maps {{new Date().getFullYear()}}</div>
 </div>
 
 </div>

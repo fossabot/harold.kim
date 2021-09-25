@@ -7,7 +7,7 @@
     </div>
   </div>
 </template>
-<script>
+<script type="module">
 import { useRoute } from "vitepress";
 
 export default {
