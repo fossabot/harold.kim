@@ -126,11 +126,15 @@ SW-3494-7684-3795
 
 ## プロセカ <span class="small"><u style="margin-top:12px; float:right">6719346701660162</u></span>
 
-<span class="badge">皆伝 ☆ 1</span>
+<div v-if="!proseka_error">
+
+<span v-for="badge in proseka.badges">
+    <span class="badge">{{badge}}</span>&nbsp;
+</span>
+
+</div>
 
 <br><br>
-
-
 
 <script type="module">
 import { useData } from 'vitepress'
@@ -140,6 +144,8 @@ export default {
     return {
       steam: {},
       sega: {'ongeki': {}, 'chunithm': {}, 'maimai': {}},
+      proseka: {},
+      proseka_error: true,
       sega_error: true,
       steam_error: true,
     };
@@ -150,7 +156,7 @@ export default {
     fetch("https://api.harold.kim/api/v1/steam")
     .then((response) => response.json())
     .then((response) => {
-      this.updateSteam(response);
+      this.updateSteam(response)
     })
     .catch((error) => {
       console.log(error)
@@ -158,7 +164,15 @@ export default {
     fetch("https://api.harold.kim/api/v1/sega")
     .then((response) => response.json())
     .then((response) => {
-      this.updateSega(response);
+      this.updateSega(response)
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+    fetch("https://api.harold.kim/api/v1/proseka")
+    .then((response) => response.json())
+    .then((response) => {
+      this.updateProseka(response)
     })
     .catch((error) => {
       console.log(error)
@@ -218,6 +232,11 @@ export default {
     updateSteam(response) {
       this.steam = response.response.games
       this.steam_error = false
+    },
+    updateProseka(response) {
+      // Parse Proseka
+      this.proseka.badges = response.badges
+      this.proseka_error = false
     },
     updateSega(response) {
       // Parse ongeki

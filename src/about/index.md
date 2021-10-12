@@ -64,9 +64,9 @@ Interested in web exploitation, pentests and development.
 
 #### Domestic Finals
 
-* <b>2020</b> &#129352; COC (Whitehat Contest)
-* <b>2019</b> &#129351; COC (Whitehat Contest)
-* <b>2018</b> &#129351; ROK Army Hacking Defense Contest
+* <b>2020</b> &#129352; Whitehat Contest (COC)
+* <b>2019</b> &#129351; Whitehat Contest (COC)
+* <b>2018</b> &#129351; ROKA Hacking Defense Contest
 * <b>2015</b> &#129351; 14th HUST Hacking Festival
 * <b>2015</b> &#129351; 2015 Inc0gnito Hacking Competition
 
@@ -119,7 +119,7 @@ Interested in web exploitation, pentests and development.
 
 #### Others
 
-* ...
+* [git@a02ea577](https://github.com/git/git/commit/a02ea577174ab8ed18f847cf1693f213e0b9c473)
 
 </td>
 
