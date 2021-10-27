@@ -130,7 +130,7 @@ canvas {
 
 .menu-right .slider:before {
     position: absolute;
-    content: "a";
+    content: "";
     height: 26px;
     width: 26px;
     left: 4px;
