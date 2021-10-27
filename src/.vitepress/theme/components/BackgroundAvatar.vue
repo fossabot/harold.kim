@@ -17,7 +17,7 @@
     <Scene background="#008004" ref="scene">
       <AmbientLight></AmbientLight>
       <FbxModel
-        src="/stypr_idle.fbx"
+        src="/stypr.z"
         ref="stypr"
         @load="showAvatar"
       />
