@@ -8,6 +8,5 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // any custom tags used within Markdown goes here
     app.component('BlogList', BlogList);
-
   }
 };

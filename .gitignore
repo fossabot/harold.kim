@@ -23,3 +23,7 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
+# Remove fbx
+*.fbx
+*.psd
+src/public/Textures/
