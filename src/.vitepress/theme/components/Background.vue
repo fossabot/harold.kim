@@ -23,7 +23,7 @@
       };
     },
     mounted() {
-        this.avatarMode = localStorage.avatarMode;
+      this.avatarMode = localStorage.avatarMode;
     },
     methods: {
       toggleAvatarMode(){

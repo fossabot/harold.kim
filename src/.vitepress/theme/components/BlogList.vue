@@ -39,7 +39,7 @@
       this.getPosts();
       // Dynamically load gists
       // Return stored gists on error
-      fetch("https://api.harold.kim/api/v1/gists")
+      fetch(`${this.data.theme.apiServer}/gists`)
       .then((response) => response.json())
       .then((response) => {
         this.updateGists(response);

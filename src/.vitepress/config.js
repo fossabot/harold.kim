@@ -23,6 +23,7 @@ module.exports = {
 	},
 	themeConfig: {
 		repo: 'https://github.com/stypr/harold.kim',
+		apiServer: 'https://api.harold.kim/api/v1',
 		editLinks: false,
 		nav: [
 			{ text: 'Home', link: '/' },

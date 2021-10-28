@@ -97,6 +97,7 @@ Interested in web exploitation, pentests and development.
 * CVE-2021-32407
 * CVE-2021-32408
 * CVE-2021-32409
+* CVE-2021-41175
 * CVE-2020-5631
 * CVE-2020-5659
 * CVE-2020-5662
@@ -143,7 +144,7 @@ Interested in web exploitation, pentests and development.
 <br>
 
 <div class="map-container">
-    <iframe :src="'https://maps.google.com/maps?q=' + this.swarm.location.lat + ',' + this.swarm.location.lng + '&hl=jp;z=14&amp;output=embed&zoom=16'">
+    <iframe :src="`https://maps.google.com/maps?q=${this.swarm.location.lat},${this.swarm.location.lng}&amp;hl=jp;z=14&amp;output=embed&amp;zoom=16`">
     </iframe>
     <div class="map-license">&copy; Google Maps {{new Date().getFullYear()}}</div>
 </div>
@@ -156,6 +157,7 @@ import { useData } from 'vitepress'
 export default {
   data() {
     return {
+      data: useData(),
       swarm: {'location': {}},
       swarm_error: true
     };
@@ -163,7 +165,7 @@ export default {
   mounted() {
     // Dynamically load APIs
     // Return stored swarm on error
-    fetch("https://api.harold.kim/api/v1/swarm")
+    fetch(`${this.data.theme.apiServer}/swarm`)
     .then((response) => response.json())
     .then((response) => {
       this.updateSwarm(response)

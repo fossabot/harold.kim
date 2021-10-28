@@ -78,7 +78,7 @@
       grid.material.opacity = 0.1;
       grid.material.transparent = true;
       this.$refs.scene.add(grid);
-      scene.fog = new Fog(0x004080, 300, 1000);
+      scene.fog = new Fog(0x004000, 300, 1000);
       scene.translateY(-60);
     },
     updated() {

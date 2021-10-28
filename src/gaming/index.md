@@ -142,6 +142,7 @@ import { useData } from 'vitepress'
 export default {
   data() {
     return {
+      data: useData(),
       steam: {},
       sega: {'ongeki': {}, 'chunithm': {}, 'maimai': {}},
       proseka: {},
@@ -153,7 +154,7 @@ export default {
   mounted() {
     // Dynamically load APIs
     // Return stored gists on error
-    fetch("https://api.harold.kim/api/v1/steam")
+    fetch(`${this.data.theme.apiServer}/steam`)
     .then((response) => response.json())
     .then((response) => {
       this.updateSteam(response)
@@ -161,7 +162,7 @@ export default {
     .catch((error) => {
       console.log(error)
     });
-    fetch("https://api.harold.kim/api/v1/sega")
+    fetch(`${this.data.theme.apiServer}/sega`)
     .then((response) => response.json())
     .then((response) => {
       this.updateSega(response)
@@ -169,7 +170,7 @@ export default {
     .catch((error) => {
       console.log(error)
     });
-    fetch("https://api.harold.kim/api/v1/proseka")
+    fetch(`${this.data.theme.apiServer}/proseka`)
     .then((response) => response.json())
     .then((response) => {
       this.updateProseka(response)

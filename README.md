@@ -6,6 +6,11 @@ Rebuilt to work in SSR. Commits before [ce4d3e34](https://github.com/stypr/harol
 
 The latest commit is run on production.
 
+## Notes
+
+* Blog posts (`src/blog/yyyy/mm/permalink/index.md`) are not uploaded on this repository.
+* Avatars are not included in this repository as it contains copyrights to respective authors. Some resources have been encrypted(?) internally.
+
 ## Setup
 
 * Install: `./setup.sh`
