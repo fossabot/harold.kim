@@ -2,7 +2,7 @@
 title: 404
 ---
 
-# &#129327; 404 Not Found
+# <i class="fa-solid fa-ban"></i> 404 Not Found
 
 The page you're looking for is deleted or moved.
 

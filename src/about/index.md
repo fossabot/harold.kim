@@ -15,18 +15,18 @@ Interested in web exploitation, pentests and development.
 
 <br>
 
-### &#128064; Affiliated with
+## <i class="fa-solid fa-face-grin-beam"></i> Affiliated with
 
-* &#128188; [Flatt Security Inc.](https://flatt.tech)
-* &#128681; [r3kapig](https://r3kapig.com)
+* <i class="fa-solid fa-briefcase"></i> [Flatt Security Inc.](https://flatt.tech)
+* <i class="fa-regular fa-flag"></i> [r3kapig](https://r3kapig.com)
 
 <table class="partition">
 <tr>
 <td>
 
-### &#128681; CTF
+## <i class="fa-solid fa-flag"></i> CTF
 
-#### International Finals
+### International Finals
 
 * <b>2021</b> &#129306; DEFCON 29 CTF
 * <b>2021</b> &#129352; LINE CTF
@@ -62,7 +62,7 @@ Interested in web exploitation, pentests and development.
 * <b>2014</b> &#129306; DEFCON 22 CTF
 * <b>2014</b> &#129352; Olympic Sochi CTF
 
-#### Domestic Finals
+### Domestic Finals
 
 * <b>2020</b> &#129352; Whitehat Contest (COC)
 * <b>2019</b> &#129351; Whitehat Contest (COC)
@@ -70,7 +70,7 @@ Interested in web exploitation, pentests and development.
 * <b>2015</b> &#129351; 14th HUST Hacking Festival
 * <b>2015</b> &#129351; 2015 Inc0gnito Hacking Competition
 
-#### Organizer
+### Organizer
 
 * <b>2021</b> Asian Cyber Security Challenge
 * <b>2020</b> BingoCTF
@@ -83,9 +83,9 @@ Interested in web exploitation, pentests and development.
 </td>
 <td>
 
-### &#128030; Disclosed vulnerabilities
+## <i class="fa-solid fa-bug"></i> Advisories
 
-#### Assigned
+### Assigned
 
 * CVE-2021-20667
 * CVE-2021-20668
@@ -127,7 +127,7 @@ Interested in web exploitation, pentests and development.
 </tr>
 </table>
 
-### &#128240; Patent
+## <i class="fa-solid fa-newspaper"></i> Patent
 
 * KR101623096B1
 
@@ -135,7 +135,7 @@ Interested in web exploitation, pentests and development.
 
 <div v-if="!swarm_error">
 
-### &#128205; Last Visit
+## <i class="fa-solid fa-location-pin"></i> Last Visit
 
 * <u>{{new Date(swarm.createdAt * 1000).toLocaleString("en-US")}}</u><br><br>
 <b>{{swarm['name']}}</b><br>

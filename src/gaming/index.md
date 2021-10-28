@@ -2,10 +2,10 @@
 title: Gaming
 ---
 
-# &#127918; Gaming
+# <i class="fa-solid fa-puzzle-piece"></i> Gaming
 
 
-## Steam <span class="small"><a style="margin-top: 12px; float:right;" href="https://steamcommunity.com/id/stypr">/id/stypr</a></span>
+## <i class="fa-brands fa-steam"></i> Steam <span class="small"><a style="margin-top: 12px; float:right;" href="https://steamcommunity.com/id/stypr">/id/stypr</a></span>
 
 <div v-if="!steam_error">
 
@@ -27,7 +27,7 @@ title: Gaming
 
 <br>
 
-## オンゲキ <span class="small"><u style="margin-top:12px; float:right;">5068084313130</u></span>
+## <i class="fa-solid fa-headphones-simple"></i> オンゲキ <span class="small"><u style="margin-top:12px; float:right;">5068084313130</u></span>
 
 
 <div v-if="!sega_error">
@@ -58,7 +58,7 @@ RATING {{this.sega.ongeki.current_rating}}
 
 <br>
 
-## maimai DX <span class="small"><u style="margin-top:12px; float:right">5069084813130</u></span>
+## <i class="fa-solid fa-headphones-simple"></i> maimai DX <span class="small"><u style="margin-top:12px; float:right">5069084813130</u></span>
 
 <div v-if="!sega_error">
 
@@ -88,7 +88,7 @@ RATING {{this.sega.maimai.current_rating}}
 
 <br>
 
-## CHUNITHM <span class="small"><u style="margin-top:12px; float:right">5063094016130</u></span>
+## <i class="fa-solid fa-headphones-simple"></i> CHUNITHM <span class="small"><u style="margin-top:12px; float:right">5063094016130</u></span>
 
 <div v-if="!sega_error">
 
@@ -118,13 +118,8 @@ RATING {{this.sega.chunithm.current_rating}}
 
 <br>
 
-## Nintendo Switch
 
-SW-3494-7684-3795
-
-<br>
-
-## プロセカ <span class="small"><u style="margin-top:12px; float:right">6719346701660162</u></span>
+## <i class="fa-solid fa-headphones-simple"></i> プロセカ <span class="small"><u style="margin-top:12px; float:right">6719346701660162</u></span>
 
 <div v-if="!proseka_error">
 
@@ -133,6 +128,12 @@ SW-3494-7684-3795
 </span>
 
 </div>
+
+<br>
+
+## <i class="fa-solid fa-gamepad"></i> Nintendo Switch
+
+SW-3494-7684-3795
 
 <br><br>
 

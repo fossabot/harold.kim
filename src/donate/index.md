@@ -2,20 +2,23 @@
 title: Donation
 ---
 
-# &#128184; Donation is ♥
+# <i class="fa-solid fa-circle-dollar-to-slot"></i> Donation is ♥
 
-* Numerous services are paid from my personal budget. Please help me to keep these services alive.
-* Donations are solely used on maintaining servers and systems.
-* Some types of Amazon gifts will be used for server maintanences.
+> Numerous services are paid from my personal budget. Please help me to keep these services alive.<br>
+> Donations are solely used on maintaining servers and systems.
+>
+> Some types of Amazon gifts will be used for server maintanences.
 
-## &#128180; How to donate
+## <i class="fa-solid fa-money-bill-1"></i> How to donate
 
 * By using [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7XMZ85VADYMG2)
 * By using <a href="https://qr.kakaopay.com/281006011000024890934332">KakaoPay</a><br>
 * <a href="https://www.amazon.co.jp/gp/registry/wishlist/3LVDOY4S0PNRF">Amazon Wishlist</a> is now supported.
 * I have plans to support other types in the future (i.e. WeChat, AliPay, BitCoin, etc.)
 
-## &#128583; Big Thanks
+<br>
+
+## <i class="fa-solid fa-face-laugh-wink"></i> Big Thanks
 
 ### Gift
 

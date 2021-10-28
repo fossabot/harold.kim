@@ -4,17 +4,18 @@ title: Projects
 
 <div class="responsive-page">
 
-# &#129520; Projects
+# <i class="fa-solid fa-toolbox"></i> Projects
 
 
-## Hosted Services
+## <i class="fa-solid fa-diagram-project"></i> Hosted Services
 
 > Due to the COVID-19 outbreak, All hosted services are currently closed.
 >
 > The service will resume as soon as the COVID-19 is completely settled down.
 
+<br>
 
-##  GitHub
+## <i class="fa-brands fa-github-alt"></i> GitHub
 
 | | | |
 | --- | --- | --- |

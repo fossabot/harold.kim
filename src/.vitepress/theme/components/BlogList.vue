@@ -1,5 +1,5 @@
 <template>
-  <h1>&#128218; Posts</h1>
+  <h1><i class="fa-solid fa-square-rss"></i> Posts</h1>
   <ul id="list-post">
     <span v-if="!(posts.length && !posts_error)"> Loading... </span>
     <li v-for="post in sortedPosts" :key="post.dates">
@@ -8,7 +8,7 @@
       <a :href="post.filename">{{ post.title }}</a><br /><br />
     </li>
   </ul>
-  <h1>&#128210; Gists</h1>
+  <h1><i class="fa-solid fa-note-sticky"></i> Gists</h1>
   <ul id="list-gist">
     <span v-if="gists_error">
       Ouch! We couldn't load the gists.<br>

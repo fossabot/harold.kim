@@ -2,10 +2,10 @@
 title: Contact
 ---
 
-# &#128222; Contact
+# <i class="fa-solid fa-address-book"></i> Contact
 
 
-## E-mail
+## <i class="fa-solid fa-envelope"></i> E-mail
 
 * [me&#64;h<span class="block">harold</span>arold.kim](mailto:)<br>
 * [ro<span class="block">rot</span>ot&#64;s<span class="block">stypr</span>typr.com](mailto:)
@@ -13,13 +13,13 @@ title: Contact
 
 <br>
 
-## Discord
+## <i class="fa-brands fa-discord"></i> Discord
 
 * <b>%\_stypr\_%</b><br>[Invite Link](https://discord.com/invite/CDgMCp3bMZ)
 
 <br>
 
-## Others
+## <i class="fa-solid fa-at"></i> Others
 
 * <b>YouTube</b><br>[stypr](https://www.youtube.com/c/stypr)<br><br>
 * <b>GitHub</b><br>[@stypr](https://github.com/stypr)<br><br>
