@@ -362,6 +362,10 @@ blockquote {
 }
 
 @media (max-width: 800px) {
+    html,
+    body {
+        font-size: 100%;
+    }
     body {
         overflow-y: scroll;
         margin-left: 0;
