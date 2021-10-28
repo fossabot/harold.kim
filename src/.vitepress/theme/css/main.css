@@ -5,6 +5,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    font-size: 110%;
     font-family: Lato, "Noto Sans KR", sans-serif;
     -webkit-font-smoothing: none;
 }
@@ -50,7 +51,7 @@ canvas {
     color: #fff;
     text-align: left;
     font-size: 1.2rem;
-	width: 171px;
+	width: 169px;
     z-index: 100 !important;
 }
 
@@ -215,8 +216,8 @@ canvas {
 
 pre,
 code {
-    font-family: "Nanum Gothic Coding", monospace;
-    line-height: 1.1em;
+    font-family: "Oxygen Mono", monospace;
+    line-height: 1.2em;
 }
 
 code a,
