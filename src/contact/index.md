@@ -21,11 +21,11 @@ title: Contact
 
 ## <i class="fa-solid fa-at"></i> Others
 
-* <b>YouTube</b><br>[stypr](https://www.youtube.com/c/stypr)<br><br>
-* <b>GitHub</b><br>[@stypr](https://github.com/stypr)<br><br>
-* <b>Twitter</b><br>[@stereotype32](https://twitter.com/stereotype32)<br><br>
-* <b>Instagram</b><br>[@brokenpacifist](https://instagram.com/brokenpacifist)<br><br>
-* <b>Facebook</b><br>[stypr](https://www.facebook.com/stypr)<br><br>
-* <b>LinkedIn</b><br>[stypr](https://www.linkedin.com/in/stypr/)<br><br>
-* <b>Twitch</b><br>[pwnfast](https://twitch.tv/pwnfast)<br><br>
-* <b>Spotify</b><br>[stypr](https://open.spotify.com/user/31yalj6bivtnzdeq2lf2bsgxxade?si=0cd1ea5ee61e48d4)<br><br>
+* <i class="fa-brands fa-youtube"></i> <b>YouTube</b><br>[stypr](https://www.youtube.com/c/stypr)<br><br>
+* <i class="fa-brands fa-github-alt"></i> <b>GitHub</b><br>[@stypr](https://github.com/stypr)<br><br>
+* <i class="fa-brands fa-twitter"></i> <b>Twitter</b><br>[@stereotype32](https://twitter.com/stereotype32)<br><br>
+* <i class="fa-brands fa-instagram"></i> <b>Instagram</b><br>[@brokenpacifist](https://instagram.com/brokenpacifist)<br><br>
+* <i class="fa-brands fa-facebook-square"></i> <b>Facebook</b><br>[stypr](https://www.facebook.com/stypr)<br><br>
+* <i class="fa-brands fa-linkedin"></i> <b>LinkedIn</b><br>[stypr](https://www.linkedin.com/in/stypr/)<br><br>
+* <i class="fa-brands fa-twitch"></i> <b>Twitch</b><br>[pwnfast](https://twitch.tv/pwnfast)<br><br>
+* <i class="fa-brands fa-spotify"></i> <b>Spotify</b><br>[stypr](https://open.spotify.com/user/31yalj6bivtnzdeq2lf2bsgxxade?si=0cd1ea5ee61e48d4)<br><br>

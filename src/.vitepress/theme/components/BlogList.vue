@@ -4,7 +4,7 @@
     <span v-if="!(posts.length && !posts_error)"> Loading... </span>
     <li v-for="post in sortedPosts" :key="post.dates">
       <b>{{ post.created_at }}</b>
-      &nbsp;<span class="category">{{ post.category }}</span><br />
+      &nbsp;<span class="badge-category">{{ post.category }}</span><br />
       <a :href="post.filename">{{ post.title }}</a><br /><br />
     </li>
   </ul>
@@ -17,7 +17,7 @@
     <span v-if="!(gists.length && !gists_error)"> Loading... </span>
     <li v-for="gist in gists" :key="gist.created_at">
       <b>{{ gist.created_at }}</b>
-      &nbsp;<span v-for="language in gist.language" :key="language" class="tag">{{ language }}</span><br />
+      &nbsp;<span v-for="language in gist.language" :key="language" class="badge-tag">{{ language }}</span><br />
       <a :href="gist.url">{{ gist.description }}</a><br /><br />
     </li>
   </ul>
