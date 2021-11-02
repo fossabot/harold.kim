@@ -4,7 +4,6 @@ title: Gaming
 
 # <i class="fa-solid fa-puzzle-piece"></i> Gaming
 
-
 ## <i class="fa-brands fa-steam"></i> Steam <span class="small"><a style="margin-top: 12px; float:right;" href="https://steamcommunity.com/id/stypr">/id/stypr</a></span>
 
 <div v-if="!steam_error">
@@ -123,9 +122,127 @@ RATING {{this.sega.chunithm.current_rating}}
 
 <div v-if="!proseka_error">
 
+
+LEVEL {{this.proseka.level}}
+
 <span v-for="badge in proseka.badges">
-    <span class="badge">{{badge}}</span>&nbsp;
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" width=180 style="margin:0 -1px;">
+        <image
+            :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/honor/honor_'+badge[0]+'_rip/degree_main.webp'"
+            x="0"
+            y="0"
+            height="80"
+            width="380"
+        ></image>
+        <image v-if="badge[2] == 'highest'" :href="this.proseka.assets.honor_highest" x="0" y="0" height="80" width="380"></image>
+        <image v-if="badge[2] == 'high'" :href="this.proseka.assets.honor_high" x="0" y="0" height="80" width="380"></image>
+        <image v-if="badge[2] == 'middle'" :href="this.proseka.assets.honor_middle" x="0" y="0" height="80" width="380"></image>
+        <image v-if="badge[1] > 0" :href="this.proseka.assets.honor_star" x="54" y="64" height="16" width="16"></image>
+        <image v-if="badge[1] > 1" :href="this.proseka.assets.honor_star" x="70" y="64" height="16" width="16"></image>
+        <image v-if="badge[1] > 2" :href="this.proseka.assets.honor_star" x="86" y="64" height="16" width="16"></image>
+        <image v-if="badge[1] > 3" :href="this.proseka.assets.honor_star" x="102" y="64" height="16" width="16"></image>
+        <image v-if="badge[1] > 4" :href="this.proseka.assets.honor_star" x="118" y="64" height="16" width="16"></image>
+    </svg>
 </span>
+<br>
+
+### Current Deck
+
+<span v-for="deck in proseka.deck_list">
+    <!-- Sorry for the spagetti code, I didn't intend to code something ugly like this! -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520" width=140>
+        <defs>
+            <pattern width="330" height="520" :id="'thumb-'+deck.id" patternUnits="userSpaceOnUse">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520">
+                    <image
+                        v-if="deck.card_info.defaultImage == 'special_training'"
+                        preserveAspectRatio="none" :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/after_training.webp'"
+                        x="-135"
+                        y="0"
+                        height="576"
+                        width="620"
+                    ></image>
+                    <image
+                        v-if="deck.card_info.defaultImage != 'special_training'"
+                        preserveAspectRatio="none" :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/normal.webp'"
+                        x="-135"
+                        y="0"
+                        height="576"
+                        width="620"
+                    ></image>
+                    <image :href="this.proseka.assets[deck.attr]" x="9" y="12" width="50" height="50"></image>
+                    <rect x="0" y="450" width="330" height="70" fill="black" fill-opacity="0.8"></rect>
+                    <text x="30" y="493" width="200" height="50" font-size="50" fill="white">Lv.{{deck.card_info.level}}</text>
+                    <!-- Rarity: 1,2,3,birthday,4 -->
+                    <image :href="this.proseka.assets.card_rarity_2" x="0" y="0" height="520" width="330"></image>
+                    <image v-if="deck.rarity_type == 'rarity_3'" :href="this.proseka.assets.card_rarity_3" x="0" y="0" height="520" width="330"></image>
+                    <image v-if="deck.rarity_type == 'rarity_4'" :href="this.proseka.assets.card_rarity_4" x="0" y="0" height="520" width="330"></image>
+                    <image v-if="deck.rarity_type == 'rarity_birthday'" :href="this.proseka.assets.card_rarity_birthday" x="0" y="0" height="520" width="330"></image>
+                    <!-- Birthday exception -->
+                    <image v-if="deck.rarity_type == 'rarity_birthday'" :href="this.proseka.assets.card_birthday" x="16" y="395" width="50" height="50"></image>
+                    <image
+                        v-if="deck.rarity > 0 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star"
+                        x="16" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 1 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star"
+                        x="66" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 2 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star"
+                        x="116" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 3 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star"
+                        x="166" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 0 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star_normal"
+                        x="16" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 1 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star_normal"
+                        x="66" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 2 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star_normal"
+                        x="116" y="395" width="50" height="50"
+                    ></image>
+                    <image
+                        v-if="deck.rarity > 3 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
+                        :href="this.proseka.assets.card_star_normal"
+                        x="166" y="395" width="50" height="50"
+                    ></image>
+                </svg>
+            </pattern>
+        </defs>
+        <rect x="4" y="4" rx="30" ry="30" width="322" height="512" :fill="'url(#thumb-'+deck.id+')'"></rect>
+    </svg>
+</span>
+
+
+### Recent Play
+
+<table width=100% class="fixed-top">
+    <tr v-for="log in this.proseka.recent_log">
+        <td width=50>
+            <div class="badge" align=center>{{log.musicDifficulty.toUpperCase()}}</div>
+        </td>
+        <td>
+            {{log.musicTitle}}
+        </td>
+        <td align=right>
+            <b style="font-size: 10pt;">{{log.playResult.toUpperCase()}}</b>
+        </td>
+    </tr>
+</table>
 
 </div>
 
@@ -135,7 +252,7 @@ RATING {{this.sega.chunithm.current_rating}}
 
 SW-3494-7684-3795
 
-<br><br>
+<br>
 
 <script type="module">
 import { useData } from 'vitepress'
@@ -146,7 +263,26 @@ export default {
       data: useData(),
       steam: {},
       sega: {'ongeki': {}, 'chunithm': {}, 'maimai': {}},
-      proseka: {},
+      proseka: {
+          'assets': {
+            'cool': '/Assets/proseka/cool.png',
+            'cute': '/Assets/proseka/cute.png',
+            'mysterious': '/Assets/proseka/mysterious.png',
+            'pure': '/Assets/proseka/pure.png',
+            'happy': '/Assets/proseka/happy.png',
+            'card_rarity_2': '/Assets/proseka/card_rarity_2.png',
+            'card_rarity_3': '/Assets/proseka/card_rarity_3.png',
+            'card_rarity_birthday': '/Assets/proseka/card_rarity_birthday.png',
+            'card_rarity_4': '/Assets/proseka/card_rarity_4.png',
+            'card_birthday': '/Assets/proseka/card_birthday.png',
+            'card_star': '/Assets/proseka/card_star.png',
+            'card_star_normal': '/Assets/proseka/card_star_normal.png',
+            'honor_star': '/Assets/proseka/honor_star.png',
+            'honor_middle': '/Assets/proseka/honor_middle.png',
+            'honor_high': '/Assets/proseka/honor_high.png',
+            'honor_highest': '/Assets/proseka/honor_highest.png',
+          }
+        },
       proseka_error: true,
       sega_error: true,
       steam_error: true,
@@ -236,8 +372,38 @@ export default {
       this.steam_error = false
     },
     updateProseka(response) {
-      // Parse Proseka
-      this.proseka.badges = response.badges
+      // Parse Proseka JSON
+      console.log(response);
+      this.proseka.username = response.user.userGamedata.name;
+      this.proseka.level = response.user.userGamedata.rank;
+      this.proseka.word = response.userProfile.word;
+      this.proseka.badges = [
+        [
+          String(response.userProfile.honorId1).padStart(4, '0'),
+          response.userProfile.honorLevel1,
+          response.userProfile.honorInfo1.honorRarity
+        ],
+        [
+          String(response.userProfile.honorId2).padStart(4, '0'),
+          response.userProfile.honorLevel2,
+          response.userProfile.honorInfo2.honorRarity
+        ],
+        [
+          String(response.userProfile.honorId3).padStart(4, '0'),
+          response.userProfile.honorLevel3,
+          response.userProfile.honorInfo3.honorRarity
+        ],
+      ];
+      this.proseka.deck_id = response.user.userGamedata.deck;
+      this.proseka.deck_list = [
+        response.userDecks[0].member1,
+        response.userDecks[0].member2,
+        response.userDecks[0].member3,
+        response.userDecks[0].member4,
+        response.userDecks[0].member5
+      ];
+      // Recent playlog needs to be sorted
+      this.proseka.recent_log = response.userMusicResults
       this.proseka_error = false
     },
     updateSega(response) {
@@ -246,7 +412,11 @@ export default {
       this.sega.ongeki.log = response.ongeki.log
       this.sega.ongeki.badges = []
       this.sega.ongeki.badges.push(response.ongeki.info.title)
-      if(response.ongeki.info.battle_point >= 15000){
+      if(response.ongeki.info.battle_point >= 19000){
+        this.sega.ongeki.badges.push('奏夢')
+      }else if(response.ongeki.info.battle_point >= 17000){
+        this.sega.ongeki.badges.push('奏華')
+      }else if(response.ongeki.info.battle_point >= 15000){
         this.sega.ongeki.badges.push('奏伝')
       }
       // Parse maimai

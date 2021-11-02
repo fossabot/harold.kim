@@ -282,6 +282,8 @@ blockquote {
     font-size: 8pt;
     padding: 3px;
     min-width: 60px;
+    letter-spacing: -0.5px;
+    margin-top:4px;
 }
 
 ::-webkit-scrollbar {
