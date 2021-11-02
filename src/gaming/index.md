@@ -156,7 +156,8 @@ LEVEL {{this.proseka.level}}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520">
                     <image
                         v-if="deck.card_info.defaultImage == 'special_training'"
-                        preserveAspectRatio="none" :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/after_training.webp'"
+                        preserveAspectRatio="none"
+                        :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/after_training.webp'"
                         x="-135"
                         y="0"
                         height="576"
@@ -164,7 +165,8 @@ LEVEL {{this.proseka.level}}
                     ></image>
                     <image
                         v-if="deck.card_info.defaultImage != 'special_training'"
-                        preserveAspectRatio="none" :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/normal.webp'"
+                        preserveAspectRatio="none"
+                        :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/normal.webp'"
                         x="-135"
                         y="0"
                         height="576"
@@ -265,22 +267,22 @@ export default {
       sega: {'ongeki': {}, 'chunithm': {}, 'maimai': {}},
       proseka: {
           'assets': {
-            'cool': '/Assets/proseka/cool.png',
-            'cute': '/Assets/proseka/cute.png',
-            'mysterious': '/Assets/proseka/mysterious.png',
-            'pure': '/Assets/proseka/pure.png',
-            'happy': '/Assets/proseka/happy.png',
-            'card_rarity_2': '/Assets/proseka/card_rarity_2.png',
-            'card_rarity_3': '/Assets/proseka/card_rarity_3.png',
-            'card_rarity_birthday': '/Assets/proseka/card_rarity_birthday.png',
-            'card_rarity_4': '/Assets/proseka/card_rarity_4.png',
-            'card_birthday': '/Assets/proseka/card_birthday.png',
-            'card_star': '/Assets/proseka/card_star.png',
-            'card_star_normal': '/Assets/proseka/card_star_normal.png',
-            'honor_star': '/Assets/proseka/honor_star.png',
-            'honor_middle': '/Assets/proseka/honor_middle.png',
-            'honor_high': '/Assets/proseka/honor_high.png',
-            'honor_highest': '/Assets/proseka/honor_highest.png',
+            'cool': '/static/proseka/cool.png',
+            'cute': '/static/proseka/cute.png',
+            'mysterious': '/static/proseka/mysterious.png',
+            'pure': '/static/proseka/pure.png',
+            'happy': '/static/proseka/happy.png',
+            'card_rarity_2': '/static/proseka/card_rarity_2.png',
+            'card_rarity_3': '/static/proseka/card_rarity_3.png',
+            'card_rarity_birthday': '/static/proseka/card_rarity_birthday.png',
+            'card_rarity_4': '/static/proseka/card_rarity_4.png',
+            'card_birthday': '/static/proseka/card_birthday.png',
+            'card_star': '/static/proseka/card_star.png',
+            'card_star_normal': '/static/proseka/card_star_normal.png',
+            'honor_star': '/static/proseka/honor_star.png',
+            'honor_middle': '/static/proseka/honor_middle.png',
+            'honor_high': '/static/proseka/honor_high.png',
+            'honor_highest': '/static/proseka/honor_highest.png',
           }
         },
       proseka_error: true,
@@ -373,7 +375,6 @@ export default {
     },
     updateProseka(response) {
       // Parse Proseka JSON
-      console.log(response);
       this.proseka.username = response.user.userGamedata.name;
       this.proseka.level = response.user.userGamedata.rank;
       this.proseka.word = response.userProfile.word;

@@ -9,6 +9,7 @@ module.exports = {
         ['meta', { name: 'viewport', content: 'initial-scale=1, user-scalable=0' }],
         ['meta', { name: 'keywords', content: 'stypr, Harold Kim, harold.kim' }],
         ['meta', { name: 'google', content: 'notranslate' }],
+		['meta', { name: 'referrer', content: 'no-referrer' }],
         ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
         ['link', { rel: 'apple-touch-icon-precomposed', href: '/favicon.ico' }],
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:300' }],
