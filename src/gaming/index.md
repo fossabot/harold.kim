@@ -122,27 +122,24 @@ RATING {{this.sega.chunithm.current_rating}}
 
 <div v-if="!proseka_error">
 
-
 LEVEL {{this.proseka.level}}
 
 <span v-for="badge in proseka.badges">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" width=180 style="margin:0 -1px;">
-        <image
-            :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/honor/honor_'+badge[0]+'_rip/degree_main.webp'"
-            x="0"
-            y="0"
-            height="80"
-            width="380"
-        ></image>
-        <image v-if="badge[2] == 'highest'" :href="this.proseka.assets.honor_highest" x="0" y="0" height="80" width="380"></image>
-        <image v-if="badge[2] == 'high'" :href="this.proseka.assets.honor_high" x="0" y="0" height="80" width="380"></image>
-        <image v-if="badge[2] == 'middle'" :href="this.proseka.assets.honor_middle" x="0" y="0" height="80" width="380"></image>
-        <image v-if="badge[1] > 0" :href="this.proseka.assets.honor_star" x="54" y="64" height="16" width="16"></image>
-        <image v-if="badge[1] > 1" :href="this.proseka.assets.honor_star" x="70" y="64" height="16" width="16"></image>
-        <image v-if="badge[1] > 2" :href="this.proseka.assets.honor_star" x="86" y="64" height="16" width="16"></image>
-        <image v-if="badge[1] > 3" :href="this.proseka.assets.honor_star" x="102" y="64" height="16" width="16"></image>
-        <image v-if="badge[1] > 4" :href="this.proseka.assets.honor_star" x="118" y="64" height="16" width="16"></image>
-    </svg>
+    <span class="badge">
+        {{badge[3]}}
+        <span v-if="badge[2]=='high' || badge[2]=='highest'">
+            ★★
+        </span>
+        <span v-else-if="badge[2]=='middle'">
+            ★
+        </span>
+        <span v-else>
+            ☆
+        </span>
+        <span v-if="badge[1]>1">
+            &nbsp;{{badge[1]}}
+        </span>
+    </span>&nbsp;
 </span>
 <br>
 
@@ -150,7 +147,7 @@ LEVEL {{this.proseka.level}}
 
 <span v-for="deck in proseka.deck_list">
     <!-- Sorry for the spagetti code, I didn't intend to code something ugly like this! -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520" width=140>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520" class="deck-image">
         <defs>
             <pattern width="330" height="520" :id="'thumb-'+deck.id" patternUnits="userSpaceOnUse">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520">
@@ -172,14 +169,9 @@ LEVEL {{this.proseka.level}}
                         height="576"
                         width="620"
                     ></image>
-                    <image :href="this.proseka.assets[deck.attr]" x="9" y="12" width="50" height="50"></image>
+                    <image :href="this.proseka.assets[deck.attr]" x="20" y="20" width="50" height="50"></image>
                     <rect x="0" y="450" width="330" height="70" fill="black" fill-opacity="0.8"></rect>
-                    <text x="30" y="493" width="200" height="50" font-size="50" fill="white">Lv.{{deck.card_info.level}}</text>
-                    <!-- Rarity: 1,2,3,birthday,4 -->
-                    <image :href="this.proseka.assets.card_rarity_2" x="0" y="0" height="520" width="330"></image>
-                    <image v-if="deck.rarity_type == 'rarity_3'" :href="this.proseka.assets.card_rarity_3" x="0" y="0" height="520" width="330"></image>
-                    <image v-if="deck.rarity_type == 'rarity_4'" :href="this.proseka.assets.card_rarity_4" x="0" y="0" height="520" width="330"></image>
-                    <image v-if="deck.rarity_type == 'rarity_birthday'" :href="this.proseka.assets.card_rarity_birthday" x="0" y="0" height="520" width="330"></image>
+                    <text x="30" y="493" width="200" height="50" font-size="40" fill="white">Lv.{{deck.card_info.level}}</text>
                     <!-- Birthday exception -->
                     <image v-if="deck.rarity_type == 'rarity_birthday'" :href="this.proseka.assets.card_birthday" x="16" y="395" width="50" height="50"></image>
                     <image
@@ -225,7 +217,7 @@ LEVEL {{this.proseka.level}}
                 </svg>
             </pattern>
         </defs>
-        <rect x="4" y="4" rx="30" ry="30" width="322" height="512" :fill="'url(#thumb-'+deck.id+')'"></rect>
+        <rect x="4" y="4" width="322" height="512" :fill="'url(#thumb-'+deck.id+')'"></rect>
     </svg>
 </span>
 
@@ -382,17 +374,23 @@ export default {
         [
           String(response.userProfile.honorId1).padStart(4, '0'),
           response.userProfile.honorLevel1,
-          response.userProfile.honorInfo1.honorRarity
+          response.userProfile.honorInfo1.honorRarity,
+          response.userProfile.honorInfo1.name,
+          response.userProfile.honorInfo1
         ],
         [
           String(response.userProfile.honorId2).padStart(4, '0'),
           response.userProfile.honorLevel2,
-          response.userProfile.honorInfo2.honorRarity
+          response.userProfile.honorInfo2.honorRarity,
+          response.userProfile.honorInfo2.name,
+          response.userProfile.honorInfo2
         ],
         [
           String(response.userProfile.honorId3).padStart(4, '0'),
           response.userProfile.honorLevel3,
-          response.userProfile.honorInfo3.honorRarity
+          response.userProfile.honorInfo3.honorRarity,
+          response.userProfile.honorInfo3.name,
+          response.userProfile.honorInfo3
         ],
       ];
       this.proseka.deck_id = response.user.userGamedata.deck;
