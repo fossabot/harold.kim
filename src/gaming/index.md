@@ -238,15 +238,14 @@ LEVEL {{this.proseka.level}}
     </tr>
 </table>
 
-</div>
-
-<br>
+<br><br>
 
 ## <i class="fa-solid fa-gamepad"></i> Nintendo Switch
 
 SW-3494-7684-3795
 
 <br>
+</div>
 
 <script type="module">
 import { useData } from 'vitepress'
