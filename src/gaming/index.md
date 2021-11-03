@@ -286,25 +286,25 @@ export default {
       osu: {},
       sega: {'ongeki': {}, 'chunithm': {}, 'maimai': {}},
       proseka: {
-          'assets': {
-            'cool': '/static/proseka/cool.png',
-            'cute': '/static/proseka/cute.png',
-            'mysterious': '/static/proseka/mysterious.png',
-            'pure': '/static/proseka/pure.png',
-            'happy': '/static/proseka/happy.png',
-            'card_rarity_2': '/static/proseka/card_rarity_2.png',
-            'card_rarity_3': '/static/proseka/card_rarity_3.png',
-            'card_rarity_birthday': '/static/proseka/card_rarity_birthday.png',
-            'card_rarity_4': '/static/proseka/card_rarity_4.png',
-            'card_birthday': '/static/proseka/card_birthday.png',
-            'card_star': '/static/proseka/card_star.png',
-            'card_star_normal': '/static/proseka/card_star_normal.png',
-            'honor_star': '/static/proseka/honor_star.png',
-            'honor_middle': '/static/proseka/honor_middle.png',
-            'honor_high': '/static/proseka/honor_high.png',
-            'honor_highest': '/static/proseka/honor_highest.png',
-          }
-        },
+        'assets': {
+          'cool': '/static/proseka/cool.png',
+          'cute': '/static/proseka/cute.png',
+          'mysterious': '/static/proseka/mysterious.png',
+          'pure': '/static/proseka/pure.png',
+          'happy': '/static/proseka/happy.png',
+          'card_rarity_2': '/static/proseka/card_rarity_2.png',
+          'card_rarity_3': '/static/proseka/card_rarity_3.png',
+          'card_rarity_birthday': '/static/proseka/card_rarity_birthday.png',
+          'card_rarity_4': '/static/proseka/card_rarity_4.png',
+          'card_birthday': '/static/proseka/card_birthday.png',
+          'card_star': '/static/proseka/card_star.png',
+          'card_star_normal': '/static/proseka/card_star_normal.png',
+          'honor_star': '/static/proseka/honor_star.png',
+          'honor_middle': '/static/proseka/honor_middle.png',
+          'honor_high': '/static/proseka/honor_high.png',
+          'honor_highest': '/static/proseka/honor_highest.png',
+        }
+      },
       proseka_error: true,
       sega_error: true,
       steam_error: true,
@@ -351,14 +351,14 @@ export default {
       return title
     },
     convertOsuDifficulty(difficulty_score) {
-        return (
-            "★".repeat(Math.floor(difficulty_score)) + 
-            (difficulty_score>=(Math.floor(difficulty_score) + 0.5) ? "☆" : "")
-        )
+      return (
+        "★".repeat(Math.floor(difficulty_score)) +
+        (difficulty_score>=(Math.floor(difficulty_score) + 0.5) ? "☆" : "")
+      )
     },
     convertChunithmScore(score) {
-        let score_rank = ["D", "C", "B", "BB", "BBB", "A", "AA", "AAA", "S", "SS", "SSS"]
-        return score_rank[score]
+      let score_rank = ["D", "C", "B", "BB", "BBB", "A", "AA", "AAA", "S", "SS", "SSS"]
+      return score_rank[score]
     },
     updateSteam(response) {
       this.steam = response.response.games
