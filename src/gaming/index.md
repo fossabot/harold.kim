@@ -113,6 +113,7 @@ RATING {{this.sega.chunithm.current_rating}}
     </tr>
 </table>
 
+</div>
 
 <br>
 
@@ -136,7 +137,7 @@ LEVEL {{this.proseka.level}}
             ☆
         </span>
         <span v-if="badge[1]>1">
-            &nbsp;{{badge[1]}}
+            &nbsp;{{badge[1]}}&nbsp;
         </span>
     </span>&nbsp;
 </span>
@@ -263,7 +264,6 @@ Rank: #{{osu.user.pp_rank}} (Country Rank: #{{osu.user.pp_country_rank}})
     </tr>
 </table>
 
-
 </div>
 
 <br>
@@ -273,7 +273,6 @@ Rank: #{{osu.user.pp_rank}} (Country Rank: #{{osu.user.pp_country_rank}})
 SW-3494-7684-3795
 
 <br>
-</div>
 
 <script type="module">
 import { useData } from 'vitepress'
