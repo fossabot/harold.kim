@@ -113,7 +113,6 @@ RATING {{this.sega.chunithm.current_rating}}
     </tr>
 </table>
 
-</div>
 
 <br>
 
@@ -221,6 +220,7 @@ LEVEL {{this.proseka.level}}
     </svg>
 </span>
 
+</div>
 
 ### Recent Play
 
@@ -238,7 +238,35 @@ LEVEL {{this.proseka.level}}
     </tr>
 </table>
 
-<br><br>
+<br>
+
+## <i class="fa-solid fa-headphones-simple"></i> osu!catch <span class="small"><a style="margin-top: 12px; float:right;" href="https://osu.ppy.sh/u/Fast">Fast</a></span>
+
+<div v-if="!osu_error">
+
+
+Rank: #{{osu.user.pp_rank}} (Country Rank: #{{osu.user.pp_country_rank}})
+
+### Recent Play
+
+<table width=100% class="fixed-top">
+    <tr v-for="log in this.osu.recent_play">
+        <td width=50>
+            <div class="badge" align=center>{{convertOsuDifficulty(log.beatmap_difficulty)}}</div>
+        </td>
+        <td>
+            {{log.beatmap_title}}
+        </td>
+        <td align=right>
+            {{log.rank.replace("X","SS")}} ({{Math.round(log.pp)}}pp)
+        </td>
+    </tr>
+</table>
+
+
+</div>
+
+<br>
 
 ## <i class="fa-solid fa-gamepad"></i> Nintendo Switch
 
@@ -255,6 +283,7 @@ export default {
     return {
       data: useData(),
       steam: {},
+      osu: {},
       sega: {'ongeki': {}, 'chunithm': {}, 'maimai': {}},
       proseka: {
           'assets': {
@@ -279,7 +308,8 @@ export default {
       proseka_error: true,
       sega_error: true,
       steam_error: true,
-    };
+      osu_error: true,
+    }
   },
   mounted() {
     // Dynamically load APIs
@@ -289,25 +319,25 @@ export default {
     .then((response) => {
       this.updateSteam(response)
     })
-    .catch((error) => {
-      console.log(error)
-    });
+    .catch((error) => { console.log(error) })
     fetch(`${this.data.theme.apiServer}/sega`)
     .then((response) => response.json())
     .then((response) => {
       this.updateSega(response)
     })
-    .catch((error) => {
-      console.log(error)
-    });
+    .catch((error) => { console.log(error) })
     fetch(`${this.data.theme.apiServer}/proseka`)
     .then((response) => response.json())
     .then((response) => {
       this.updateProseka(response)
     })
-    .catch((error) => {
-      console.log(error)
-    });
+    .catch((error) => { console.log(error) })
+    fetch(`${this.data.theme.apiServer}/osu`)
+    .then((response) => response.json())
+    .then((response) => {
+      this.updateOsu(response)
+    })
+    .catch((error) => { console.log(error) })
   },
   methods: {
     // XSS-safe decode
@@ -320,55 +350,29 @@ export default {
       }
       return title
     },
-    // ...................................
+    convertOsuDifficulty(difficulty_score) {
+        return (
+            "★".repeat(Math.floor(difficulty_score)) + 
+            (difficulty_score>=(Math.floor(difficulty_score) + 0.5) ? "☆" : "")
+        )
+    },
     convertChunithmScore(score) {
-        let result = ""
-        switch(score){
-            case '0':
-                result = 'D'
-                break
-            case '1':
-                result = 'C'
-                break
-            case '2':
-                result = 'B'
-                break
-            case '3':
-                result = 'BB'
-                break
-            case '4':
-                result = 'BBB'
-                break
-            case '5':
-                result = 'A'
-                break
-            case '6':
-                result = 'AA'
-                break
-            case '7':
-                result = 'AAA'
-                break
-            case '8':
-                result = 'S'
-                break
-            case '9':
-                result = 'SS'
-                break
-            case '10':
-                result = 'SSS'
-                break
-        }
-        return result
+        let score_rank = ["D", "C", "B", "BB", "BBB", "A", "AA", "AAA", "S", "SS", "SSS"]
+        return score_rank[score]
     },
     updateSteam(response) {
       this.steam = response.response.games
       this.steam_error = false
     },
+    updateOsu(response){
+      this.osu = response
+      this.osu_error = false
+    },
     updateProseka(response) {
       // Parse Proseka JSON
-      this.proseka.username = response.user.userGamedata.name;
-      this.proseka.level = response.user.userGamedata.rank;
-      this.proseka.word = response.userProfile.word;
+      this.proseka.username = response.user.userGamedata.name
+      this.proseka.level = response.user.userGamedata.rank
+      this.proseka.word = response.userProfile.word
       this.proseka.badges = [
         [
           String(response.userProfile.honorId1).padStart(4, '0'),
@@ -391,15 +395,15 @@ export default {
           response.userProfile.honorInfo3.name,
           response.userProfile.honorInfo3
         ],
-      ];
-      this.proseka.deck_id = response.user.userGamedata.deck;
+      ]
+      this.proseka.deck_id = response.user.userGamedata.deck
       this.proseka.deck_list = [
         response.userDecks[0].member1,
         response.userDecks[0].member2,
         response.userDecks[0].member3,
         response.userDecks[0].member4,
         response.userDecks[0].member5
-      ];
+      ]
       // Recent playlog needs to be sorted
       this.proseka.recent_log = response.userMusicResults
       this.proseka_error = false
