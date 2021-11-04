@@ -280,7 +280,7 @@ blockquote {
 .badge {
     border: 1px solid #ccc;
     font-size: 8pt;
-    padding: 5px 3px;
+    padding: 5px 10px;
     min-width: 60px;
     letter-spacing: -0.5px;
     margin:0;

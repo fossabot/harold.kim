@@ -226,7 +226,7 @@ LEVEL {{this.proseka.level}}
 ### Recent Play
 
 <table width=100% class="fixed-top">
-    <tr v-for="log in this.proseka.recent_log">
+    <tr v-for="log in proseka.recent_log">
         <td width=50>
             <div class="badge" align=center>{{log.musicDifficulty.toUpperCase()}}</div>
         </td>
@@ -251,7 +251,7 @@ Rank: #{{osu.user.pp_rank}} (Country Rank: #{{osu.user.pp_country_rank}})
 ### Recent Play
 
 <table width=100% class="fixed-top">
-    <tr v-for="log in this.osu.recent_play">
+    <tr v-for="log in osu.recent_play">
         <td width=50>
             <div class="badge" align=center>{{convertOsuDifficulty(log.beatmap_difficulty)}}</div>
         </td>
