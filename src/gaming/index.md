@@ -154,7 +154,7 @@ LEVEL {{this.proseka.level}}
                     <image
                         v-if="deck.card_info.defaultImage == 'special_training'"
                         preserveAspectRatio="none"
-                        :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/after_training.webp'"
+                        :href="'https://sekai-assets.harold.kim/character/member_cutout/'+deck['assetbundleName']+'/after_training.png'"
                         x="-135"
                         y="0"
                         height="576"
@@ -163,7 +163,7 @@ LEVEL {{this.proseka.level}}
                     <image
                         v-if="deck.card_info.defaultImage != 'special_training'"
                         preserveAspectRatio="none"
-                        :href="'https://sekai-res.dnaroma.eu/file/sekai-assets/character/member_cutout/'+deck['assetbundleName']+'_rip/normal.webp'"
+                        :href="'https://sekai-assets.harold.kim/character/member_cutout/'+deck['assetbundleName']+'/normal.png'"
                         x="-135"
                         y="0"
                         height="576"
