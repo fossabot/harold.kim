@@ -221,8 +221,6 @@ LEVEL {{this.proseka.level}}
     </svg>
 </span>
 
-</div>
-
 ### Recent Play
 
 <table width=100% class="fixed-top">
@@ -238,6 +236,8 @@ LEVEL {{this.proseka.level}}
         </td>
     </tr>
 </table>
+
+</div>
 
 <br>
 
