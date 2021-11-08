@@ -27,5 +27,5 @@ title: Contact
 * <i class="fa-brands fa-instagram"></i> <b>Instagram</b><br>[@brokenpacifist](https://instagram.com/brokenpacifist)<br><br>
 * <i class="fa-brands fa-facebook-square"></i> <b>Facebook</b><br>[stypr](https://www.facebook.com/stypr)<br><br>
 * <i class="fa-brands fa-linkedin"></i> <b>LinkedIn</b><br>[stypr](https://www.linkedin.com/in/stypr/)<br><br>
-* <i class="fa-brands fa-twitch"></i> <b>Twitch</b><br>[pwnfast](https://twitch.tv/pwnfast)<br><br>
+<!-- * <i class="fa-brands fa-twitch"></i> <b>Twitch</b><br>[stypr64](https://twitch.tv/stypr64)<br><br> -->
 * <i class="fa-brands fa-spotify"></i> <b>Spotify</b><br>[stypr](https://open.spotify.com/user/31yalj6bivtnzdeq2lf2bsgxxade?si=0cd1ea5ee61e48d4)<br><br>

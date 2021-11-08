@@ -8,7 +8,7 @@
   </div>
 </template>
 <script setup lang="ts">
-  import NavBar from './NavBar.vue';
+  import NavBar from './components/NavBar.vue';
   import Background from './components/Background.vue';
   import Container from './components/Container.vue';
   import { useData } from 'vitepress';

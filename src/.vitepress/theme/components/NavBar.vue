@@ -17,9 +17,26 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
+<script type="module">
   import { useRoute, useData } from "vitepress";
+  // const route = useRoute()
 
-  const { theme } = useData()
-  const route = useRoute()
+  export default {
+    data() {
+      return {
+        theme: useData().theme,
+        route: useRoute(),
+      };
+    },    
+    computed: {
+      isRoot() {
+        let route = useRoute();
+        if (route.path) {
+          return route.path === "/" || route.path === "/index.html";
+        } else {
+          return false;
+        }
+      },
+    },
+  };
 </script>
