@@ -172,48 +172,53 @@ LEVEL {{this.proseka.level}}
                     <image :href="this.proseka.assets[deck.attr]" x="20" y="20" width="50" height="50"></image>
                     <rect x="0" y="450" width="330" height="70" fill="black" fill-opacity="0.8"></rect>
                     <text x="30" y="493" width="200" height="50" font-size="40" fill="white">Lv.{{deck.card_info.level}}</text>
-                    <!-- Birthday exception -->
-                    <image v-if="deck.rarity_type == 'rarity_birthday'" :href="this.proseka.assets.card_birthday" x="16" y="395" width="50" height="50"></image>
-                    <image
-                        v-if="deck.rarity > 0 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star"
-                        x="16" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 1 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star"
-                        x="66" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 2 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star"
-                        x="116" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 3 && deck.card_info.defaultImage == 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star"
-                        x="166" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 0 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star_normal"
-                        x="16" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 1 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star_normal"
-                        x="66" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 2 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star_normal"
-                        x="116" y="395" width="50" height="50"
-                    ></image>
-                    <image
-                        v-if="deck.rarity > 3 && deck.card_info.defaultImage != 'special_training' && deck.rarity_type != 'rarity_birthday'"
-                        :href="this.proseka.assets.card_star_normal"
-                        x="166" y="395" width="50" height="50"
-                    ></image>
+                    <template v-if="deck.rarity_type == 'rarity_birthday'">
+                        <image :href="this.proseka.assets.card_birthday" x="16" y="395" width="50" height="50"></image>
+                    </template>
+                    <template v-else-if="(deck.card_info.level >= 50 || deck.card_info.defaultImage == 'special_training') && deck.rarity_type != 'rarity_birthday'">
+                        <image
+                            v-if="deck.rarity > 0"
+                            :href="this.proseka.assets.card_star"
+                            x="16" y="395" width="50" height="50"
+                        ></image>
+                        <image
+                            v-if="deck.rarity > 1"
+                            :href="this.proseka.assets.card_star"
+                            x="66" y="395" width="50" height="50"
+                        ></image>
+                        <image
+                            v-if="deck.rarity > 2"
+                            :href="this.proseka.assets.card_star"
+                            x="116" y="395" width="50" height="50"
+                        ></image>
+                        <image
+                            v-if="deck.rarity > 3"
+                            :href="this.proseka.assets.card_star"
+                            x="166" y="395" width="50" height="50"
+                        ></image>
+                    </template>
+                    <template v-else>
+                        <image
+                            v-if="deck.rarity > 0"
+                            :href="this.proseka.assets.card_star_normal"
+                            x="16" y="395" width="50" height="50"
+                        ></image>
+                        <image
+                            v-if="deck.rarity > 1"
+                            :href="this.proseka.assets.card_star_normal"
+                            x="66" y="395" width="50" height="50"
+                        ></image>
+                        <image
+                            v-if="deck.rarity > 2"
+                            :href="this.proseka.assets.card_star_normal"
+                            x="116" y="395" width="50" height="50"
+                        ></image>
+                        <image
+                            v-if="deck.rarity > 3"
+                            :href="this.proseka.assets.card_star_normal"
+                            x="166" y="395" width="50" height="50"
+                        ></image>
+                    </template>
                 </svg>
             </pattern>
         </defs>

@@ -366,10 +366,10 @@ blockquote {
 }
 
 .deck-image {
-    min-width: 140px;
-    width: 140px;
-    max-width: 140px;
+    min-width: 20%;
+    max-width: 20%;
 }
+
 
 @media (max-width: 800px) {
     html,
@@ -457,9 +457,5 @@ blockquote {
         margin: 0em;
         display: block;
         font-size: 24%;
-    }
-    .deck-image {
-        min-width: 20%;
-        max-width: 20%;
     }
 }
