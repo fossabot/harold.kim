@@ -57,6 +57,11 @@ export default {
         if(route.path.startsWith("/blog/") && route.path !== '/blog/' && route.path !== '/blog/index.html'){
           this.post_view = true;
           this.loadDisqus();
+          document.querySelectorAll(".container img").forEach(item => {
+            item.onerror = () => {
+              item.src = "/static/dead_image.png";
+            }
+          })
         }else{
           this.post_view = false;
         }
@@ -67,6 +72,8 @@ export default {
   },
   updated(){
     this.refreshContainer();
+    console.log("Triggered updated()");
+
   },
   mounted(){
     this.refreshContainer();
