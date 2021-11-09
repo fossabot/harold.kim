@@ -146,7 +146,6 @@ LEVEL {{this.proseka.level}}
 ### Current Deck
 
 <span v-for="deck in proseka.deck_list">
-    <!-- Sorry for the spagetti code, I didn't intend to code something ugly like this! -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 520" class="deck-image">
         <defs>
             <pattern width="330" height="520" :id="'thumb-'+deck.id" patternUnits="userSpaceOnUse">

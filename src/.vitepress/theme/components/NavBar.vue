@@ -19,7 +19,6 @@
 </template>
 <script type="module">
   import { useRoute, useData } from "vitepress";
-  // const route = useRoute()
 
   export default {
     data() {

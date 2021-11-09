@@ -14,7 +14,7 @@
       ref="camera"
       :position="{x: 0, y: 90, z: 200}"
     />
-    <Scene background="#008004" ref="scene">
+    <Scene background="#006004" ref="scene">
       <AmbientLight></AmbientLight>
       <FbxModel
         src="/stypr.z"

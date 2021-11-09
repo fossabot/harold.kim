@@ -132,6 +132,9 @@ canvas {
 .menu-right .slider:before {
     position: absolute;
     content: "";
+    opacity: 0.7;
+    color: black;
+    font-size: 18px;
     height: 26px;
     width: 26px;
     left: 4px;
@@ -150,6 +153,7 @@ canvas {
 }
 
 .menu-right input:checked + .slider:before {
+    content: "";
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);

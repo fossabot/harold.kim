@@ -2,6 +2,7 @@
   <div class="container hidden" :class="{ 'display': !isRoot }">
     <div class="padded" ref="container">
       <a href="/blog/" class="back" v-if="post_view">&laquo; Article List</a>
+      <!-- Content is automatically imported from Vitepress -->
       <Content />
       <div id="disqus_thread" :class="{ 'hidden': !post_view }"></div>
     </div>
@@ -44,22 +45,28 @@ export default {
         });
       }else{
         // Dynamically load DISQUS on BlogPost
-        var d = document, s = d.createElement('script');
-            s.src = 'https://haroldie.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
+        var d = document;
+        var s = d.createElement('script');
+        s.src = 'https://haroldie.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
       }
     },
     refreshContainer() {
       this.jumpContainer();
       let route = useRoute();
       if(route.path){
-        if(route.path.startsWith("/blog/") && route.path !== '/blog/' && route.path !== '/blog/index.html'){
+        // When you read blog post, load DISQUS
+        if(route.path.startsWith("/blog/") &&
+           route.path !== '/blog/' &&
+           route.path !== '/blog/index.html'){
           this.post_view = true;
           this.loadDisqus();
-          document.querySelectorAll(".container img").forEach(item => {
+          // Let images have fallbacks
+          this.$el.querySelectorAll("img").forEach(item => {
             item.onerror = () => {
               item.src = "/static/dead_image.png";
+              item.width = 100;
             }
           })
         }else{
@@ -72,8 +79,6 @@ export default {
   },
   updated(){
     this.refreshContainer();
-    console.log("Triggered updated()");
-
   },
   mounted(){
     this.refreshContainer();

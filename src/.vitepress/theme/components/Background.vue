@@ -1,9 +1,13 @@
 <template>
-  <BackgroundNormal v-if="avatarMode !== '1'" />
-  <BackgroundAvatar v-if="avatarMode === '1'" />
+  <BackgroundNormal v-if="avatarMode === false" />
+  <BackgroundAvatar v-else />
   <div class="menu-right">
     <label class="switch">
-        <input type="checkbox" :checked="avatarMode === '1'" @change="toggleAvatarMode()">
+        <input
+          type="checkbox"
+          :checked="avatarMode !== false"
+          @change="toggleAvatarMode()"
+        >
         <span class="slider"></span>
     </label>
   </div>
@@ -19,23 +23,17 @@
     },
     data() {
       return {
-        avatarMode: 0,
+        avatarMode: false,
       };
     },
     mounted() {
-      this.avatarMode = localStorage.avatarMode;
+      this.avatarMode = Boolean(Number(localStorage.avatarMode));
     },
     methods: {
       toggleAvatarMode(){
-        localStorage.avatarMode = (localStorage.avatarMode === '1') ? '0' : '1';
-        this.avatarMode = localStorage.avatarMode;
-        return true;
+        localStorage.avatarMode = (localStorage.avatarMode === "1") ? "0" : "1";
+        this.avatarMode = Boolean(Number(localStorage.avatarMode));
       }
-    },
-    computed: {
-      isAvatarMode: function () {
-        return localStorage.avatarMode === '1';
-      },
     }
   };
 </script>

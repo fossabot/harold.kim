@@ -144,7 +144,9 @@ Interested in web exploitation, pentests and development.
 <br>
 
 <div class="map-container">
-    <iframe :src="`https://maps.google.com/maps?q=${this.swarm.location.lat},${this.swarm.location.lng}&amp;hl=jp;z=14&amp;output=embed&amp;zoom=16`">
+    <iframe
+      :src="`https://maps.google.com/maps?q=${this.swarm.location.lat},${this.swarm.location.lng}&amp;hl=jp;z=14&amp;output=embed&amp;zoom=16`"
+    >
     </iframe>
     <div class="map-license">&copy; Google Maps {{new Date().getFullYear()}}</div>
 </div>
