@@ -374,6 +374,40 @@ blockquote {
     max-width: 20%;
 }
 
+.gameboy-button-set {
+    padding: 40px;
+}
+.gameboy-button {
+    border: 1px solid #ccc;
+    border-radius: 0.1em;
+    background: transparent;
+    color: white;
+    font-size: 20px; 
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.gameboy-button:hover {
+    background: #33993333;
+}
+
+.gameboy-button:active {
+    background: #99ee9933;
+}
+
+.gameboy-button-long {
+    width: 150px; padding: 10px;
+}
+
+.gameboy-button-max {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    font-size: 20px;
+}
 
 @media (max-width: 800px) {
     html,
