@@ -1,3 +1,7 @@
+* {
+    touch-action: manipulation;
+}
+
 html,
 body {
     background: transparent;
@@ -374,6 +378,10 @@ blockquote {
     max-width: 20%;
 }
 
+.gameboy-image {
+    width: 100%;
+    image-rendering: pixelated;
+}
 .gameboy-button-set {
     padding: 40px;
 }

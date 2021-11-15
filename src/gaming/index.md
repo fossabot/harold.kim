@@ -7,45 +7,47 @@ title: Gaming
 
 <div v-if="!steam_error && !sega_error && !proseka_error">
 
-## <i class="fa-solid fa-cloud"></i> Gameboy Cloud
+## <i class="fa-solid fa-user-group"></i> Gameboy Cloud
 
-<div v-if="gameboy_mode">
-  <img :src="gameboy_url" :alt="gameboy_url" style="width:100%;">
-  <div class="gameboy-button-set">
-    <div width=100% align=center>
-    <table>
-        <tr>
-            <td></td>
-            <td><button class="gameboy-button" v-on:click="controlGameboy(2)"><i class="fa-solid fa-caret-up"></i></button></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><button class="gameboy-button" v-on:click="controlGameboy(1)"><i class="fa-solid fa-caret-left"></i></button></td>
-            <td></td>
-            <td><button class="gameboy-button" v-on:click="controlGameboy(0)"><i class="fa-solid fa-caret-right"></i></button></td>
-            <td style="width:50px;"></td>
-            <td><button class="gameboy-button" v-on:click="controlGameboy(4)"><i class="fa-solid fa-a"></i></button></td>
-            <td><button class="gameboy-button" v-on:click="controlGameboy(5)"><i class="fa-solid fa-b"></i></button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button  class="gameboy-button" v-on:click="controlGameboy(3)"><i class="fa-solid fa-caret-down"></i></button></td>
-        </tr>
-    </table>
+<div v-if="gameboy_toggle">
+    <img class="gameboy-image" :src="gameboy_url" :alt="gameboy_url">
+    <div class="gameboy-button-set">
+        <div width=100% align=center>
+        <table>
+            <tr>
+                <td></td>
+                <td><button class="gameboy-button" v-on:click="controlGameboy(2)"><i class="fa-solid fa-caret-up"></i></button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button class="gameboy-button" v-on:click="controlGameboy(1)"><i class="fa-solid fa-caret-left"></i></button></td>
+                <td></td>
+                <td><button class="gameboy-button" v-on:click="controlGameboy(0)"><i class="fa-solid fa-caret-right"></i></button></td>
+                <td style="width:50px;"></td>
+                <td><button class="gameboy-button" v-on:click="controlGameboy(4)"><i class="fa-solid fa-a"></i></button></td>
+                <td><button class="gameboy-button" v-on:click="controlGameboy(5)"><i class="fa-solid fa-b"></i></button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button  class="gameboy-button" v-on:click="controlGameboy(3)"><i class="fa-solid fa-caret-down"></i></button></td>
+            </tr>
+        </table>
+        </div>
+        <br>
+        <div width=100% align=center>
+            <button class="gameboy-button gameboy-button-long" v-on:click="controlGameboy(6)">SELECT</button>
+            <button class="gameboy-button gameboy-button-long" v-on:click="controlGameboy(7)">START</button>
+        </div>
     </div>
-    <br>
-    <div width=100% align=center>
-        <button class="gameboy-button gameboy-button-long" v-on:click="controlGameboy(6)">SELECT</button>
-        <button class="gameboy-button gameboy-button-long" v-on:click="controlGameboy(7)">START</button>
-    </div>
-  </div>
 </div>
-<button class="gameboy-button gameboy-button-max" v-on:click="startGameboy()" v-if="!gameboy_mode">
-  <b>Start Pokémon RED</b><br>
-  Click to play together! 
+<button class="gameboy-button gameboy-button-max" v-on:click="startGameboy()" v-if="!gameboy_toggle">
+    <b>Start Pokémon RED</b><br>
+    <small>
+      Click to play together!<br>
+    </small>
 </button>
-
 </div>
+<br>
 
 ## <i class="fa-brands fa-steam"></i> Steam <span class="small"><a style="margin-top: 12px; float:right;" href="https://steamcommunity.com/id/stypr">/id/stypr</a></span>
 
@@ -351,15 +353,13 @@ export default {
           'honor_highest': '/static/proseka/honor_highest.png',
         }
       },
+      gameboy_toggle: false,
+      gameboy_url: null,
+      gameboy_ws: null,
       proseka_error: true,
       sega_error: true,
       steam_error: true,
       osu_error: true,
-      gameboy_cache: +new Date(),
-      gameboy_interval: null,
-      gameboy_mode: false,
-      gameboy_url: null,
-      gameboy_ws: null,
     }
   },
   mounted() {
@@ -496,14 +496,15 @@ export default {
         }
         this.gameboy_url = URL.createObjectURL(event.data)
       }
-      this.gameboy_mode = true
+      this.gameboy_toggle = true
     },
     controlGameboy(control_id) {
       this.gameboy_ws.send(control_id)
     }
   },
   destroyed() {
-    clearInterval(this.gameboy_interval);
+    this.gameboy_ws.close()
+    this.gameboy_ws = null
   }
 };
 </script>

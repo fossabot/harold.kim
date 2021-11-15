@@ -6,7 +6,7 @@ module.exports = {
     title: "harold.kim",
     description: "Yet another security enthusiast.",
     head: [
-        ['meta', { name: 'viewport', content: 'initial-scale=1, user-scalable=0' }],
+        ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' }],
         ['meta', { name: 'keywords', content: 'stypr, Harold Kim, harold.kim' }],
         ['meta', { name: 'google', content: 'notranslate' }],
         ['meta', { name: 'referrer', content: 'no-referrer' }],
