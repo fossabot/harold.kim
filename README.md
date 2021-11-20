@@ -1,4 +1,6 @@
 # harold.kim
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fstypr%2Fharold.kim.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fstypr%2Fharold.kim?ref=badge_shield)
+
 
 harold.kim on Vue, design by stypr. MIT License (Clause 4).
 
@@ -23,3 +25,6 @@ The latest commit is running on the production.
 * Run Dev: `yarn dev`
 * Run Build: `yarn build && yarn serve`
 * Deploy: `./deploy.sh`
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fstypr%2Fharold.kim.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fstypr%2Fharold.kim?ref=badge_large)
